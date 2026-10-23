@@ -1,0 +1,1217 @@
+{
+ "zona": "Alrededores de la Biblioteca El Tintal (Kennedy)",
+ "ciudad": "Bogotá",
+ "punto_central": [
+  4.64307,
+  -74.15481
+ ],
+ "bbox": [
+  4.6385,
+  -74.1593,
+  4.6475,
+  -74.1503
+ ],
+ "conteo_por_categoria": {
+  "educacion": 3,
+  "transporte": 19,
+  "parques": 25,
+  "comercio": 65,
+  "otros": 6,
+  "alimentacion": 7,
+  "servicios": 3
+ },
+ "nombres_categoria": {
+  "salud": "Salud",
+  "educacion": "Educación",
+  "parques": "Parques y recreación",
+  "transporte": "Transporte",
+  "alimentacion": "Comida y bebida",
+  "servicios": "Servicios",
+  "comercio": "Comercio",
+  "via_peatonal": "Vías peatonales",
+  "otros": "Otros"
+ },
+ "elementos": [
+  {
+   "id": "way/252078999",
+   "categoria": "educacion",
+   "tipo": "biblioteca",
+   "nombre": "Biblioteca el Tintal Manuel Zapata Olivella",
+   "distancia_m": 0,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13652472971",
+   "categoria": "educacion",
+   "tipo": "biblioteca",
+   "nombre": "Biblioteca Manuel Zapata Olivella - El Tintal",
+   "distancia_m": 6,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339074",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 23,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/83886254",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Metropolitano El Tintal",
+   "distancia_m": 55,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2439962071",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 89,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155712",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 114,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155713",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 118,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155714",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 122,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/83886259",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 125,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155715",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 127,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543431319",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "EDS Tintal",
+   "distancia_m": 128,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155716",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 132,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6978975368",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 134,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/9407105092",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 134,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483737745",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 136,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155717",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 137,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155723",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 139,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834539",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 141,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155718",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 143,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834541",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 144,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155722",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 145,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834542",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 147,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848328",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Biblioteca El Tintal",
+   "distancia_m": 148,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155719",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Mc Donalds",
+   "distancia_m": 149,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834545",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 150,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848327",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Biblioteca El Tintal",
+   "distancia_m": 154,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155720",
+   "categoria": "comercio",
+   "tipo": "zapatería",
+   "nombre": "SMITH SHOES",
+   "distancia_m": 154,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834546",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 155,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1037987077",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "Cinemas Procinal",
+   "distancia_m": 157,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155721",
+   "categoria": "comercio",
+   "tipo": "peluquería",
+   "nombre": "COSMOPOLITAN Sala de Belleza",
+   "distancia_m": 160,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834548",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 161,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834549",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 166,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/83886246",
+   "categoria": "comercio",
+   "tipo": "centro comercial",
+   "nombre": "Tintal Plaza",
+   "distancia_m": 168,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155711",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 169,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834551",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 171,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155710",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 174,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834552",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 177,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155709",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 179,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834554",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 182,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155708",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 186,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834555",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 188,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155681",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 193,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155682",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 193,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155683",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 193,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155707",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 193,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834566",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 194,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155680",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 194,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834559",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 195,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834560",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 195,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834558",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 197,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834561",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 197,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155679",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 197,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834557",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 198,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155678",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 198,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834564",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 199,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155706",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 199,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551347366",
+   "categoria": "servicios",
+   "tipo": "policía",
+   "nombre": "CAI Tintal",
+   "distancia_m": 199,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834563",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 203,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/483834562",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 206,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155705",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 207,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178098987",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "C. C. Tintal Plaza",
+   "distancia_m": 215,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155702",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 217,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155701",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 224,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1570410951",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 224,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155684",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 226,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155685",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 226,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155686",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 227,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155687",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 227,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642968763",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 228,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155688",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 229,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155689",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 230,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155690",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 231,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155699",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 232,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642986036",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 232,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155692",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 234,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155700",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 234,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155693",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 236,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155694",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 238,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155695",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 240,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155696",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 243,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155697",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 246,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155691",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": null,
+   "distancia_m": 247,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/484155698",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": null,
+   "distancia_m": 248,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168163567",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "IED Gabriel Betancourt Mejia Sede A",
+   "distancia_m": 282,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642986033",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 292,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/51002523",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Tabakú Central",
+   "distancia_m": 303,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625572998",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 306,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642986035",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 342,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306041011",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 352,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625572996",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 352,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306040044",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 354,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642986034",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 362,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178098989",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Tintalá",
+   "distancia_m": 365,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848287",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Tintalá I",
+   "distancia_m": 371,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136095",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 397,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306040081",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 398,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13128301972",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Guanabanazo",
+   "distancia_m": 401,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1550260636",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": "Salones de catequesis",
+   "distancia_m": 406,
+   "accesible_silla_ruedas": "yes"
+  },
+  {
+   "id": "way/352334429",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Parroquia Santa Bernardita",
+   "distancia_m": 421,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1157529472",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 439,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306040082",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 442,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168309707",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 449,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1198319602",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "Terpel",
+   "distancia_m": 450,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4612547689",
+   "categoria": "comercio",
+   "tipo": "tienda de computadores",
+   "nombre": "Grupo OnBox S.A.S",
+   "distancia_m": 453,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/51337760",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 466,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6551416521",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Panaderia",
+   "distancia_m": 480,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319937931",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 482,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848290",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 492,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/522616345",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Cooratiendas",
+   "distancia_m": 499,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985970",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 499,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3465601253",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": null,
+   "distancia_m": 505,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1157529473",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 510,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616470",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 522,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985969",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 539,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/49885986",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 557,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1157529474",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 573,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305169766",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Tabakú",
+   "distancia_m": 590,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3465600171",
+   "categoria": "comercio",
+   "tipo": "kiosco",
+   "nombre": null,
+   "distancia_m": 591,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616469",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 592,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543471916",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Frankfurt",
+   "distancia_m": 594,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3465603554",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 595,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/12728918112",
+   "categoria": "transporte",
+   "tipo": "cicloparqueadero",
+   "nombre": null,
+   "distancia_m": 602,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229395",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla 2",
+   "distancia_m": 624,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "relation/14577696",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 634,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306044906",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Transversal 80G",
+   "distancia_m": 654,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625575143",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 664,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301238337",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 665,
+   "accesible_silla_ruedas": "no"
+  },
+  {
+   "id": "relation/17823430",
+   "categoria": "transporte",
+   "tipo": "estación",
+   "nombre": "Biblioteca Tintal",
+   "distancia_m": 696,
+   "accesible_silla_ruedas": "yes"
+  }
+ ],
+ "vacios": {
+  "vias_peatonales_total": 144,
+  "vias_peatonales_km": 16.21,
+  "vias_con_dato_silla_ruedas": 0,
+  "pct_vias_con_dato_silla_ruedas": 0.0,
+  "vias_con_dato_superficie": 46,
+  "pct_vias_con_dato_superficie": 31.9,
+  "lugares_total": 128,
+  "lugares_sin_nombre": 98,
+  "lugares_con_dato_silla_ruedas": 3,
+  "ids_vias_sin_dato_silla_ruedas": [
+   "way/74063370",
+   "way/90693860",
+   "way/167989295",
+   "way/175788993",
+   "way/247511798",
+   "way/256801517",
+   "way/319937757",
+   "way/319938282",
+   "way/551339069",
+   "way/551339070",
+   "way/551339076",
+   "way/623577537",
+   "way/623577538",
+   "way/625569904",
+   "way/625569906",
+   "way/625569908",
+   "way/625569909",
+   "way/625569911",
+   "way/625569914",
+   "way/625569915",
+   "way/625590893",
+   "way/641019935",
+   "way/641969226",
+   "way/642968764",
+   "way/642985999",
+   "way/642986000",
+   "way/642986015",
+   "way/642986019",
+   "way/643003023",
+   "way/651386443",
+   "way/674136084",
+   "way/674136086",
+   "way/674136087",
+   "way/674136089",
+   "way/674136092",
+   "way/674136097",
+   "way/749029573",
+   "way/749029576",
+   "way/749067344",
+   "way/751928343",
+   "way/801418444",
+   "way/801419482",
+   "way/801419483",
+   "way/801419484",
+   "way/801449760",
+   "way/991970855",
+   "way/991970856",
+   "way/991970859",
+   "way/991970863",
+   "way/991970864",
+   "way/991970865",
+   "way/991970866",
+   "way/991970867",
+   "way/991970868",
+   "way/991970869",
+   "way/991970870",
+   "way/991970871",
+   "way/992045132",
+   "way/1078130493",
+   "way/1078142970",
+   "way/1078142971",
+   "way/1078142972",
+   "way/1078156774",
+   "way/1078156789",
+   "way/1078161008",
+   "way/1078161009",
+   "way/1078161023",
+   "way/1087260372",
+   "way/1117927761",
+   "way/1117927763",
+   "way/1117927764",
+   "way/1117927765",
+   "way/1125044903",
+   "way/1125044904",
+   "way/1125044905",
+   "way/1125044906",
+   "way/1125044907",
+   "way/1126109492",
+   "way/1126109497",
+   "way/1141461055",
+   "way/1141461057",
+   "way/1149015316",
+   "way/1160698373",
+   "way/1160698374",
+   "way/1160698375",
+   "way/1160698376",
+   "way/1160698377",
+   "way/1160698378",
+   "way/1160698379",
+   "way/1160698380",
+   "way/1160698381",
+   "way/1160698382",
+   "way/1160698383",
+   "way/1160698384",
+   "way/1160698385",
+   "way/1160698386",
+   "way/1160698387",
+   "way/1160698388",
+   "way/1169986059",
+   "way/1169995859",
+   "way/1169998169",
+   "way/1170001467",
+   "way/1170001468",
+   "way/1170006299",
+   "way/1170006300",
+   "way/1170007372",
+   "way/1170452738",
+   "way/1170635632",
+   "way/1170637313",
+   "way/1171026687",
+   "way/1171026688",
+   "way/1171229685",
+   "way/1171229686",
+   "way/1172748803",
+   "way/1197469646",
+   "way/1198009784",
+   "way/1300546305",
+   "way/1300546306",
+   "way/1300546307",
+   "way/1300546308",
+   "way/1322383896",
+   "way/1322383901",
+   "way/1322383905",
+   "way/1412119252",
+   "way/1412119253",
+   "way/1412119254",
+   "way/1412119255",
+   "way/1412119258",
+   "way/1462629233",
+   "way/1462629234",
+   "way/1462629235",
+   "way/1462629984",
+   "way/1508631251",
+   "way/1518594467",
+   "way/1518594468",
+   "way/1518594469",
+   "way/1521188517",
+   "way/1570410926",
+   "way/1570410931",
+   "way/1570410935",
+   "way/1570410938",
+   "way/1570410941",
+   "way/1570410950",
+   "way/1571185976"
+  ]
+ }
+}

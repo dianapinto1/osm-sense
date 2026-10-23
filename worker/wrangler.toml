@@ -1,0 +1,11 @@
+# OSM Sense – Cloudflare Worker (capa gratuita).
+# La llave de Groq NO va aquí: se carga como secreto con  npx wrangler secret put GROQ_API_KEY
+name = "osm-sense"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+# Modelo de Groq (se puede cambiar sin tocar el código).
+GROQ_MODEL = "openai/gpt-oss-120b"
+# Sitios que pueden usar el Worker, separados por comas.
+ORIGENES = "https://dianapinto1.github.io,http://localhost:8080,http://127.0.0.1:8080"

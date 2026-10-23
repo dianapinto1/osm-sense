@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbfaf9">
+  <title>OSM Sense</title>
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
+  <div id="anuncio" class="solo-lectores" role="status" aria-live="polite"></div>
+
+  <header class="barra">
+    <div class="marca">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 44c-1 0-15-14-15-25a15 15 0 0 1 30 0c0 11-14 25-15 25z" fill="#64c6ff" stroke="#343433" stroke-width="1.5"/>
+        <circle cx="19" cy="18" r="2" fill="#343433"/>
+        <circle cx="29" cy="18" r="2" fill="#343433"/>
+        <path d="M19 24q5 4 10 0" fill="none" stroke="#343433" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M41 6l1.6 3.4 3.4 1.6-3.4 1.6L41 16l-1.6-3.4L36 11l3.4-1.6z" fill="#ffcd6c" stroke="#343433" stroke-width="1"/>
+        <circle cx="6" cy="34" r="3" fill="#00c978" stroke="#343433" stroke-width="1"/>
+      </svg>
+      <div>
+        <h1>OSM Sense</h1>
+        <p class="sub" id="nombre-zona">Cargando zona…</p>
+      </div>
+    </div>
+    <button type="button" class="pill" id="btn-ajustes" aria-haspopup="dialog">⚙️ Ajustes</button>
+  </header>
+
+  <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
+    <div id="mapa" class="mapa"></div>
+    <div class="mapa-controles">
+      <button type="button" class="pill flotante" id="btn-donde">📍 ¿Dónde estoy?</button>
+      <button type="button" class="pill flotante" id="btn-expandir" aria-expanded="false" aria-controls="franja-mapa">Ampliar mapa</button>
+    </div>
+  </section>
+
+  <main class="chat">
+    <h2 class="solo-lectores">Conversación</h2>
+    <p id="contador-hallazgos" class="contador" hidden>📝 Hallazgos de esta conversación: <strong>0</strong></p>
+    <div id="mensajes" class="mensajes" role="log" aria-live="polite" aria-relevant="additions"></div>
+  </main>
+
+  <footer class="entrada">
+    <div class="ideas" role="group" aria-labelledby="t-ideas">
+      <span id="t-ideas" class="ideas-titulo">Ideas para preguntar</span>
+      <div id="ideas" class="ideas-lista"></div>
+    </div>
+    <form id="form-chat" class="form-chat">
+      <label for="entrada" class="solo-lectores">Escribe tu pregunta o cuéntale algo al mapa</label>
+      <textarea id="entrada" rows="1" placeholder="Pregúntale al mapa…" autocomplete="off"></textarea>
+      <button type="submit" class="enviar" id="btn-enviar" aria-label="Enviar">➤</button>
+      <button type="button" class="mic" id="btn-mic" aria-pressed="false" aria-label="Hablar">🎤</button>
+    </form>
+  </footer>
+
+  <dialog id="ajustes" class="hoja" aria-labelledby="t-ajustes">
+    <div class="hoja-cabeza">
+      <h2 id="t-ajustes">Ajustes</h2>
+      <button type="button" class="pill" id="btn-cerrar-ajustes">Cerrar</button>
+    </div>
+
+    <section aria-labelledby="t-ver">
+      <h3 id="t-ver">Cómo ver y escuchar</h3>
+      <div class="interruptores">
+        <button type="button" class="interruptor" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+        <button type="button" class="interruptor" id="btn-letra" aria-pressed="false">Letra grande</button>
+        <button type="button" class="interruptor" id="btn-pedagogico" aria-pressed="false">Modo sencillo</button>
+        <button type="button" class="interruptor" id="btn-voz" aria-pressed="false">Leer en voz alta</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="t-capas">
+      <h3 id="t-capas">Qué hay en el mapa</h3>
+      <ul id="capas" class="capas"></ul>
+    </section>
+
+    <section aria-labelledby="t-vacios" class="vacios">
+      <h3 id="t-vacios">Lo que le falta al mapa</h3>
+      <div id="vacios-datos"></div>
+      <label class="check"><input type="checkbox" id="chk-vacios"> Mostrar vías peatonales sin dato de accesibilidad</label>
+      <a id="btn-nota" class="boton-principal" target="_blank" rel="noopener">📝 Abrir nota en OpenStreetMap</a>
+    </section>
+
+    <p class="nota">Datos © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a> (ODbL).
+      OSM Sense es un prototipo: no edita OpenStreetMap y puede equivocarse.</p>
+  </dialog>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "aviso": "Guion del modo demo (sin internet). Respuestas preparadas a mano con datos reales de OSM de la zona; cada id existe en zona.geojson.",
+  "turnos": [
+    {
+      "pregunta": "Explícame esta zona",
+      "respuesta": {
+        "respuesta": "Estás junto a la Biblioteca El Tintal Manuel Zapata Olivella. A 55 m está el Parque Metropolitano El Tintal. Hay paraderos de bus a 89 m y a 148 m, el centro comercial Tintal Plaza a 168 m y un cine a 157 m. A 282 m está el colegio IED Gabriel Betancourt Mejía. Ojo: casi 8 de cada 10 lugares de esta zona no tienen nombre en el mapa. Esta información viene de OpenStreetMap y puede estar incompleta.",
+        "respuesta_simple": "Estás en la Biblioteca El Tintal. Muy cerca hay un parque grande, paraderos de bus y un centro comercial.",
+        "ids_citados": ["way/252078999", "way/83886254", "node/2439962071", "node/2501848328", "way/83886246", "node/1037987077", "way/168163567"],
+        "datos_faltantes": ["98 de los 128 lugares de esta zona no tienen nombre en el mapa."],
+        "pregunta_de_vuelta": null,
+        "hallazgos": []
+      }
+    },
+    {
+      "pregunta": "¿Hay algún centro de salud cerca?",
+      "respuesta": {
+        "respuesta": "En los datos del mapa de esta zona no aparece ningún centro de salud, droguería ni consultorio. Eso no quiere decir que no existan: puede que nadie los haya agregado todavía a OpenStreetMap.",
+        "respuesta_simple": "El mapa no muestra ningún lugar de salud aquí. Puede que falten en el mapa.",
+        "ids_citados": [],
+        "datos_faltantes": ["No hay lugares de salud registrados en esta zona."],
+        "pregunta_de_vuelta": "¿Conoces algún centro de salud o droguería por aquí?",
+        "hallazgos": []
+      }
+    },
+    {
+      "pregunta": "¿Puedo llegar a la biblioteca en silla de ruedas?",
+      "respuesta": {
+        "respuesta": "No lo sé, y prefiero no adivinar. En esta zona hay 144 tramos de andenes y senderos peatonales, unos 16 km, y ninguno dice si se puede recorrer en silla de ruedas. La biblioteca tampoco tiene ese dato en el mapa. Los paraderos de bus más cercanos están a 89 m y a 148 m.",
+        "respuesta_simple": "No lo sé. El mapa no dice si los andenes ni la biblioteca sirven para silla de ruedas.",
+        "ids_citados": ["way/252078999", "node/2439962071", "node/2501848328"],
+        "datos_faltantes": [
+          "Ninguno de los 144 tramos peatonales dice si es accesible en silla de ruedas.",
+          "No sabemos si la biblioteca tiene rampa o una entrada accesible."
+        ],
+        "pregunta_de_vuelta": "¿Sabes si la entrada de la biblioteca tiene rampa?",
+        "hallazgos": []
+      }
+    },
+    {
+      "pregunta": "Sí te cuento: la rampa de la entrada de la biblioteca está rota. Y al lado del parque está la tienda de doña Rosa, que vende arepas; su número es 300 123 4567.",
+      "respuesta": {
+        "respuesta": "¡Gracias por contarme! Anoté dos cosas: la rampa de la entrada de la biblioteca está rota, y hay una tienda de barrio que vende arepas cerca del parque que no aparece en el mapa. Abajo tienes un borrador de nota para cada una: revísalas y, si quieres, publícalas en OpenStreetMap para que la comunidad las verifique. Por privacidad no incluí nombres ni teléfonos.",
+        "respuesta_simple": "¡Gracias! Hice dos notas: la rampa rota de la biblioteca y una tienda de arepas que falta en el mapa. Revísalas antes de publicarlas.",
+        "ids_citados": ["way/252078999", "way/83886254"],
+        "datos_faltantes": [],
+        "pregunta_de_vuelta": null,
+        "hallazgos": [
+          {
+            "tipo": "accesibilidad",
+            "descripcion": "La rampa de la entrada de la biblioteca está rota.",
+            "id_relacionado": "way/252078999",
+            "etiqueta_osm_sugerida": "wheelchair=limited"
+          },
+          {
+            "tipo": "nuevo",
+            "descripcion": "Tienda de barrio que vende arepas, al lado del Parque Metropolitano El Tintal. No aparece en el mapa.",
+            "id_relacionado": "way/83886254",
+            "etiqueta_osm_sugerida": "shop=convenience"
+          }
+        ]
+      }
+    }
+  ]
+}

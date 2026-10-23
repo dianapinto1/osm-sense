@@ -1,0 +1,19 @@
+{
+  "zona": {
+    "nombre": "Alrededores de la Biblioteca El Tintal (Kennedy)",
+    "ciudad": "Bogotá",
+    "bbox_sur_oeste_norte_este": [
+      4.6385,
+      -74.1593,
+      4.6475,
+      -74.1503
+    ],
+    "punto_central": [
+      4.64307,
+      -74.15481
+    ]
+  },
+  "overpass_url": "https://overpass.kumi.systems/api/interpreter",
+  "max_elementos_por_pregunta": 60,
+  "radio_cercania_m": 500
+}

@@ -1,0 +1,7 @@
+.env
+__pycache__/
+datos_crudos/*.json
+.venv/
+worker/.dev.vars
+worker/.wrangler/
+node_modules/

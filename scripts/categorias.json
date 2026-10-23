@@ -1,0 +1,48 @@
+{
+  "_nota": "Reglas en orden: gana la primera que coincide. 'valores': ['*'] = cualquier valor.",
+  "reglas": [
+    {"categoria": "salud", "clave": "amenity", "valores": ["hospital", "clinic", "doctors", "dentist", "pharmacy"]},
+    {"categoria": "salud", "clave": "healthcare", "valores": ["*"]},
+    {"categoria": "educacion", "clave": "amenity", "valores": ["school", "kindergarten", "college", "university", "library"]},
+    {"categoria": "parques", "clave": "leisure", "valores": ["park", "playground", "pitch", "sports_centre", "garden"]},
+    {"categoria": "transporte", "clave": "highway", "valores": ["bus_stop"]},
+    {"categoria": "transporte", "clave": "public_transport", "valores": ["platform", "station"]},
+    {"categoria": "transporte", "clave": "amenity", "valores": ["bicycle_parking", "bus_station", "parking"]},
+    {"categoria": "alimentacion", "clave": "amenity", "valores": ["restaurant", "cafe", "fast_food", "bar", "pub", "ice_cream"]},
+    {"categoria": "alimentacion", "clave": "shop", "valores": ["bakery", "supermarket", "convenience", "greengrocer", "butcher"]},
+    {"categoria": "servicios", "clave": "amenity", "valores": ["bank", "atm", "police", "post_office", "townhall", "community_centre", "place_of_worship", "toilets", "marketplace", "social_facility"]},
+    {"categoria": "comercio", "clave": "shop", "valores": ["*"]},
+    {"categoria": "via_peatonal", "clave": "highway", "valores": ["footway", "pedestrian", "path", "steps"]}
+  ],
+  "nombres_categoria": {
+    "salud": "Salud",
+    "educacion": "Educación",
+    "parques": "Parques y recreación",
+    "transporte": "Transporte",
+    "alimentacion": "Comida y bebida",
+    "servicios": "Servicios",
+    "comercio": "Comercio",
+    "via_peatonal": "Vías peatonales",
+    "otros": "Otros"
+  },
+  "tipos_es": {
+    "amenity=hospital": "hospital", "amenity=clinic": "centro médico", "amenity=doctors": "consultorio médico",
+    "amenity=dentist": "odontología", "amenity=pharmacy": "droguería", "amenity=school": "colegio",
+    "amenity=kindergarten": "jardín infantil", "amenity=college": "instituto", "amenity=university": "universidad",
+    "amenity=library": "biblioteca", "leisure=park": "parque", "leisure=playground": "parque infantil",
+    "leisure=pitch": "cancha", "leisure=sports_centre": "centro deportivo", "leisure=garden": "jardín",
+    "highway=bus_stop": "paradero de bus", "public_transport=platform": "paradero / plataforma",
+    "public_transport=station": "estación", "amenity=bus_station": "terminal de buses",
+    "amenity=bicycle_parking": "cicloparqueadero", "amenity=parking": "parqueadero",
+    "amenity=restaurant": "restaurante", "amenity=cafe": "cafetería", "amenity=fast_food": "comida rápida",
+    "amenity=bar": "bar", "amenity=pub": "bar", "amenity=ice_cream": "heladería", "shop=bakery": "panadería",
+    "shop=supermarket": "supermercado", "shop=convenience": "tienda de barrio", "shop=greengrocer": "fruver",
+    "shop=butcher": "carnicería", "shop=yes": "local comercial (tipo sin especificar)", "shop=kiosk": "kiosco",
+    "shop=computer": "tienda de computadores", "shop=mall": "centro comercial", "shop=shoes": "zapatería",
+    "shop=hairdresser": "peluquería", "amenity=bank": "banco", "amenity=atm": "cajero", "amenity=police": "policía",
+    "amenity=post_office": "oficina de correo", "amenity=townhall": "alcaldía", "amenity=community_centre": "salón comunal",
+    "amenity=place_of_worship": "lugar de culto", "amenity=toilets": "baño público", "amenity=marketplace": "plaza de mercado",
+    "amenity=social_facility": "servicio social", "highway=footway": "sendero o andén peatonal",
+    "highway=pedestrian": "calle peatonal", "highway=path": "camino", "highway=steps": "escaleras"
+  }
+}

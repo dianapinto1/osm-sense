@@ -1,0 +1,27 @@
+[
+  {
+    "id": "explicame_zona",
+    "texto": "Explícame esta zona",
+    "categorias": []
+  },
+  {
+    "id": "que_hay_cerca",
+    "texto": "¿Qué hay cerca de aquí?",
+    "categorias": ["salud", "educacion", "parques", "transporte", "alimentacion", "servicios"]
+  },
+  {
+    "id": "salud_educacion",
+    "texto": "¿Hay servicios de salud o colegios cerca?",
+    "categorias": ["salud", "educacion"]
+  },
+  {
+    "id": "tomar_algo",
+    "texto": "¿Dónde puedo tomar algo?",
+    "categorias": ["alimentacion"]
+  },
+  {
+    "id": "accesibilidad",
+    "texto": "¿Puedo moverme por aquí en silla de ruedas?",
+    "categorias": ["transporte", "salud", "parques"]
+  }
+]
