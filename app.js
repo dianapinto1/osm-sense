@@ -26,10 +26,12 @@
   };
 
   // El guion se carga al abrir la página para que siga disponible si luego se cae la conexión.
+  // cache "no-cache": el navegador siempre confirma si hay datos nuevos (evita mezclar versiones).
+  const datos = url => fetch(url, { cache: "no-cache" }).then(r => r.json());
   const [geo, resumen, guion] = await Promise.all([
-    fetch("data/zona.geojson").then(r => r.json()),
-    fetch("data/resumen.json").then(r => r.json()),
-    fetch("data/demo_conversacion.json").then(r => r.json()).catch(() => ({ turnos: [] }))
+    datos("data/zona.geojson"),
+    datos("data/resumen.json"),
+    datos("data/demo_conversacion.json").catch(() => ({ turnos: [] }))
   ]);
   const NOMBRES = resumen.nombres_categoria;
   const v = resumen.vacios;
