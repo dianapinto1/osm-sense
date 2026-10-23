@@ -1,19 +1,19 @@
 {
   "zona": {
-    "nombre": "Alrededores de la Biblioteca El Tintal (Kennedy)",
+    "nombre": "El Tintal, Calandaima y Tintal Norte (Kennedy)",
     "ciudad": "Bogotá",
     "bbox_sur_oeste_norte_este": [
-      4.6385,
-      -74.1593,
-      4.6475,
-      -74.1503
+      4.638,
+      -74.1775,
+      4.6645,
+      -74.137
     ],
     "punto_central": [
       4.64307,
       -74.15481
     ]
   },
-  "overpass_url": "https://overpass.kumi.systems/api/interpreter",
+  "overpass_url": "https://overpass-api.de/api/interpreter",
   "max_elementos_por_pregunta": 60,
   "radio_cercania_m": 500
 }

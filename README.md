@@ -3,7 +3,7 @@
 Visor experimental que traduce datos de OpenStreetMap a lenguaje natural, con voz,
 alto contraste y modo sencillo. Ponencia en State of the Map Latam 2026.
 
-> Zona piloto: alrededores de la Biblioteca El Tintal (Kennedy, Bogotá), con datos reales
+> Zona piloto: El Tintal, Calandaima y Tintal Norte (Kennedy, Bogotá), con datos reales
 > de OpenStreetMap. Para otra zona, cambia `config.json` y corre los pasos 1 y 2.
 
 ## Requisitos

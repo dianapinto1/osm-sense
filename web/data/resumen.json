@@ -1,24 +1,25 @@
 {
- "zona": "Alrededores de la Biblioteca El Tintal (Kennedy)",
+ "zona": "El Tintal, Calandaima y Tintal Norte (Kennedy)",
  "ciudad": "Bogotá",
  "punto_central": [
   4.64307,
   -74.15481
  ],
  "bbox": [
-  4.6385,
-  -74.1593,
-  4.6475,
-  -74.1503
+  4.638,
+  -74.1775,
+  4.6645,
+  -74.137
  ],
  "conteo_por_categoria": {
-  "educacion": 3,
-  "transporte": 19,
-  "parques": 25,
-  "comercio": 65,
-  "otros": 6,
-  "alimentacion": 7,
-  "servicios": 3
+  "educacion": 26,
+  "transporte": 158,
+  "parques": 288,
+  "comercio": 109,
+  "otros": 22,
+  "alimentacion": 102,
+  "servicios": 32,
+  "salud": 23
  },
  "nombres_categoria": {
   "salud": "Salud",
@@ -929,11 +930,35 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "node/3465606070",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": null,
+   "distancia_m": 521,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "way/538616470",
    "categoria": "parques",
    "tipo": "cancha",
    "nombre": null,
    "distancia_m": 522,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3465602071",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": null,
+   "distancia_m": 529,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2292049777",
+   "categoria": "comercio",
+   "tipo": "licorera",
+   "nombre": "Bar-Cafe",
+   "distancia_m": 536,
    "accesible_silla_ruedas": null
   },
   {
@@ -945,6 +970,46 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "node/3465602449",
+   "categoria": "comercio",
+   "tipo": "peluquería",
+   "nombre": null,
+   "distancia_m": 542,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136093",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 548,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3465601708",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": null,
+   "distancia_m": 552,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306045128",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 552,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985963",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 554,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "way/49885986",
    "categoria": "parques",
    "tipo": "parque",
@@ -953,11 +1018,83 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "node/3465607040",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": null,
+   "distancia_m": 562,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985962",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 569,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848330",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 570,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1508631254",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 571,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "way/1157529474",
    "categoria": "transporte",
    "tipo": "parqueadero",
    "nombre": null,
    "distancia_m": 573,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305178737",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque de los Soldaditos",
+   "distancia_m": 577,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2445037303",
+   "categoria": "comercio",
+   "tipo": "venta de carros",
+   "nombre": "Fonticoches",
+   "distancia_m": 580,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229380",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "C. R. San Loranzo de Castilla",
+   "distancia_m": 581,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848329",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Liceo El Castillo",
+   "distancia_m": 583,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411890726",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Cancha Tocarema",
+   "distancia_m": 585,
    "accesible_silla_ruedas": null
   },
   {
@@ -985,6 +1122,14 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "node/13943229381",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "C. R. San Pedro de Castilla",
+   "distancia_m": 593,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "way/543471916",
    "categoria": "alimentacion",
    "tipo": "panadería",
@@ -1001,11 +1146,35 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "way/1508631253",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 598,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985968",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 599,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "node/12728918112",
    "categoria": "transporte",
    "tipo": "cicloparqueadero",
    "nombre": null,
    "distancia_m": 602,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3556689217",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Mi Cabaña Asados",
+   "distancia_m": 614,
    "accesible_silla_ruedas": null
   },
   {
@@ -1017,6 +1186,30 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "node/5251184529",
+   "categoria": "salud",
+   "tipo": "odontología",
+   "nombre": "Odontologia",
+   "distancia_m": 629,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229382",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 630,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642629785",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 630,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "relation/14577696",
    "categoria": "parques",
    "tipo": "parque",
@@ -1025,11 +1218,115 @@
    "accesible_silla_ruedas": null
   },
   {
+   "id": "way/945346930",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 638,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149182630",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 638,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305178811",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Distrital Patio Bonito II",
+   "distancia_m": 639,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251112863",
+   "categoria": "comercio",
+   "tipo": "miscelánea",
+   "nombre": "Abby Plast",
+   "distancia_m": 640,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848331",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Liceo La Esperanza",
+   "distancia_m": 644,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251184544",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "Peña",
+   "distancia_m": 644,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251112868",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Surti Max",
+   "distancia_m": 645,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229396",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 646,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/183481761",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 646,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5252764531",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": "Bar Ginebra Pub",
+   "distancia_m": 648,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6338458288",
+   "categoria": "comercio",
+   "tipo": "agencia de viajes",
+   "nombre": "@ESTUDIO",
+   "distancia_m": 649,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848282",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Liceo La Esperanza",
+   "distancia_m": 654,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "way/306044906",
    "categoria": "parques",
    "tipo": "parque",
    "nombre": "Parque Transversal 80G",
    "distancia_m": 654,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235603",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Canal Américas",
+   "distancia_m": 658,
    "accesible_silla_ruedas": null
   },
   {
@@ -1049,38 +1346,4906 @@
    "accesible_silla_ruedas": "no"
   },
   {
+   "id": "way/1301232637",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 673,
+   "accesible_silla_ruedas": "no"
+  },
+  {
+   "id": "node/13943235604",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Tintala",
+   "distancia_m": 684,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625601706",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 691,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616468",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 693,
+   "accesible_silla_ruedas": null
+  },
+  {
    "id": "relation/17823430",
    "categoria": "transporte",
    "tipo": "estación",
    "nombre": "Biblioteca Tintal",
    "distancia_m": 696,
    "accesible_silla_ruedas": "yes"
+  },
+  {
+   "id": "way/642985964",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 704,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305177461",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Darío Echandía Sede C",
+   "distancia_m": 708,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229371",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Canal Castilla",
+   "distancia_m": 709,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543191405",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "Isfruits",
+   "distancia_m": 709,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251005644",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Supermercado Emanuel",
+   "distancia_m": 712,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642629790",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 718,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168163501",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 726,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229372",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 727,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985967",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 728,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305178582",
+   "categoria": "salud",
+   "tipo": "centro médico",
+   "nombre": "UPA 92",
+   "distancia_m": 731,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848325",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Conj. Res. Santafé del Tintal",
+   "distancia_m": 733,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985966",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 735,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1136808350",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 741,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2439962075",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 760,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305177147",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Darío Echandía Sede A",
+   "distancia_m": 762,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616467",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 765,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625590887",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 768,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149182634",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 769,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305177264",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Darío Echandía Sede B",
+   "distancia_m": 770,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/945346929",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 773,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251076255",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Farmacenter",
+   "distancia_m": 780,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4650285799",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": "Barcelona Bar",
+   "distancia_m": 784,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543370671",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Carnes el Nogal",
+   "distancia_m": 794,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543471915",
+   "categoria": "comercio",
+   "tipo": "almacén por departamentos",
+   "nombre": "Maxio Fertas",
+   "distancia_m": 796,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749035482",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 802,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1563332467",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 807,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1136808349",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 811,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251233426",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Castilla Express",
+   "distancia_m": 815,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5250892023",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drougueria Copisalud",
+   "distancia_m": 816,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749035481",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 823,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/641970805",
+   "categoria": "servicios",
+   "tipo": "policía",
+   "nombre": "CAI Patio Bonito",
+   "distancia_m": 832,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543202609",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "La Pamplonesa Supermercado",
+   "distancia_m": 838,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5252251372",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Donna Letty",
+   "distancia_m": 841,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251076244",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "El Brasero Al Rojo",
+   "distancia_m": 850,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168300813",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 852,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1322383907",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 852,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543202608",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Panaderiía y Cafateriía Villa Castilla",
+   "distancia_m": 853,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749035485",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 853,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168301323",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Gimansio Moderno San Francisco",
+   "distancia_m": 856,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168309686",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Nueva Castilla",
+   "distancia_m": 862,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/306297280",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 862,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848323",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Santa Fé del Tintal",
+   "distancia_m": 863,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235605",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Patio Bonito",
+   "distancia_m": 865,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229368",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Nueva Castilla II",
+   "distancia_m": 866,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543201040",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 867,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642986037",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 868,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251233431",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 869,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543190054",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": "Incolbest",
+   "distancia_m": 879,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749035483",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 888,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/9410314542",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 889,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235606",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Primavera",
+   "distancia_m": 890,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229367",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Nuevo Castilla 7",
+   "distancia_m": 892,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5250892022",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Pan Express",
+   "distancia_m": 896,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251131690",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Pollos Carne La Fortaleza",
+   "distancia_m": 896,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253792006",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Super Economica",
+   "distancia_m": 896,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616457",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 900,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/50342695",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Valladolid",
+   "distancia_m": 908,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1136808346",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 908,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543168186",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 910,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253792001",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Gran Rebaja",
+   "distancia_m": 917,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136109",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 918,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749035484",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 918,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616458",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 922,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625472583",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 931,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848332",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 934,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599201",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 941,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168310653",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 950,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543313338",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 955,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599217",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 957,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168309703",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 958,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319611800",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Merkacol #3",
+   "distancia_m": 966,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251164803",
+   "categoria": "alimentacion",
+   "tipo": "carnicería",
+   "nombre": "Carnes AAA Master",
+   "distancia_m": 969,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543202607",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 969,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235607",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "IED Salucoop Sur",
+   "distancia_m": 970,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1291540456",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 977,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168301324",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 979,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178098993",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 990,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543190056",
+   "categoria": "comercio",
+   "tipo": "local comercial (tipo sin especificar)",
+   "nombre": "Justo & Bueno",
+   "distancia_m": 992,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625601710",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 995,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251131717",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Julio's Pizza",
+   "distancia_m": 996,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625472585",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1000,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235608",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Campo Hermoso",
+   "distancia_m": 1005,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625601709",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1008,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848333",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 1010,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625569894",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1013,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319942502",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1016,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599200",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1016,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543194687",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1021,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642621093",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1023,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848280",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Parque Castilla",
+   "distancia_m": 1032,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642621094",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1037,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642626050",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1040,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319942440",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1042,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251176181",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "Panishop",
+   "distancia_m": 1046,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251176182",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Tienda Tato's Place",
+   "distancia_m": 1046,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555416",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1046,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/249307383",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Parroquia San Efren",
+   "distancia_m": 1047,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301092959",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1049,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2397986449",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Prados de Castilla",
+   "distancia_m": 1051,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110625",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 1051,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661824",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1053,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/961789724",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1053,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3097610713",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1054,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625590886",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1058,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555415",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1061,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3264377097",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": null,
+   "distancia_m": 1066,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848310",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Urb. Villa Mariana",
+   "distancia_m": 1068,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251233441",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueriía Farma Plus",
+   "distancia_m": 1069,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/183669152",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "IED Saludcoop Calandaima",
+   "distancia_m": 1069,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555414",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1078,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168301322",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1080,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305158643",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Primavera",
+   "distancia_m": 1080,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3097364524",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "Panadería",
+   "distancia_m": 1081,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305179072",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1085,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301092957",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1088,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3097364091",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Cooratiendas",
+   "distancia_m": 1092,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339054",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1094,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985942",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1094,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229360",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Nueva Castilla II Etapa",
+   "distancia_m": 1096,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301092956",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1099,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599222",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1103,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251289621",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Farmaservir",
+   "distancia_m": 1105,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/352344773",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1106,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/352344834",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1106,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625601708",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1106,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160767",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1108,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642626046",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1108,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229359",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Nueva Castilla Etapa II",
+   "distancia_m": 1109,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985936",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1109,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1940834907",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": null,
+   "distancia_m": 1112,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651770913",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1113,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128375535",
+   "categoria": "comercio",
+   "tipo": "mueblería",
+   "nombre": null,
+   "distancia_m": 1115,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848284",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Urb. Villa Mariana",
+   "distancia_m": 1117,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110623",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 1117,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253042443",
+   "categoria": "comercio",
+   "tipo": "salón de belleza",
+   "nombre": "Shekinah",
+   "distancia_m": 1118,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3264384253",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": null,
+   "distancia_m": 1119,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661817",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1119,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616454",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1119,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235609",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "IED Inst. Tec. Rodrigo de Triana",
+   "distancia_m": 1123,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128362085",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Donde Maria",
+   "distancia_m": 1124,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616444",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1128,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253042444",
+   "categoria": "comercio",
+   "tipo": "lotería y chance",
+   "nombre": "Paga Todo",
+   "distancia_m": 1131,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543194688",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Asturias",
+   "distancia_m": 1135,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454338",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": "Fundación REDEC",
+   "distancia_m": 1139,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253042445",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "Sofia",
+   "distancia_m": 1142,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319944281",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1144,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543190058",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1146,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234373",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1146,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543207669",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Ciudad Patio Bonito",
+   "distancia_m": 1150,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/168309676",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1151,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642621091",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1151,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234361",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1151,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128369947",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Restaurante y Bar Los Amigos",
+   "distancia_m": 1152,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985943",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1152,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642626043",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1154,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985983",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1157,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319944282",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1161,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251289622",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Farmasanos",
+   "distancia_m": 1165,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599223",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1165,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616455",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1168,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411098595",
+   "categoria": "salud",
+   "tipo": "hospital",
+   "nombre": "Unidad de Servicios de Salud Patio Bonito El Tintal",
+   "distancia_m": 1170,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1157527831",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1171,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411098180",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1172,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128366575",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": null,
+   "distancia_m": 1173,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661911",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1173,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241832334",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Colombo Francesa",
+   "distancia_m": 1180,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160772",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1185,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234362",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1186,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234370",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1186,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229358",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Castilla Reservado",
+   "distancia_m": 1187,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985916",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1188,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159457",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Torres de Castilla",
+   "distancia_m": 1191,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651770912",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1191,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6384572587",
+   "categoria": "comercio",
+   "tipo": "artículos deportivos",
+   "nombre": "AS REALES  agencia de transportes",
+   "distancia_m": 1192,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229357",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Castilla Reservado",
+   "distancia_m": 1195,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411104048",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1195,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160768",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1196,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128359895",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1198,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159456",
+   "categoria": "comercio",
+   "tipo": "taller de carros",
+   "nombre": "Tecniservicios La 80",
+   "distancia_m": 1198,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159455",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Cigarreria El tesoro del castillo",
+   "distancia_m": 1200,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5252658268",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "El Castillo del Pan",
+   "distancia_m": 1201,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848283",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Castilla",
+   "distancia_m": 1202,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411099311",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1202,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159453",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Salsamentaria Las Torres",
+   "distancia_m": 1203,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848289",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 1205,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128359315",
+   "categoria": "comercio",
+   "tipo": "peluquería",
+   "nombre": "Harpon",
+   "distancia_m": 1205,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538616445",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1205,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251131707",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "JB",
+   "distancia_m": 1209,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159452",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Cartoons Burger",
+   "distancia_m": 1213,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/498450718",
+   "categoria": "comercio",
+   "tipo": "centro comercial",
+   "nombre": "Centro Comercial Ciudad Tintal",
+   "distancia_m": 1214,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128358661",
+   "categoria": "comercio",
+   "tipo": "licorera",
+   "nombre": null,
+   "distancia_m": 1215,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/407507965",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1217,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159451",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "El vecino express",
+   "distancia_m": 1217,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2439962080",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "El Tintal Urbano",
+   "distancia_m": 1220,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234371",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1220,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4095665937",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1221,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1174165870",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1221,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848286",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "La Magdalena",
+   "distancia_m": 1222,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/9733976073",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1224,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1940810948",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "Panadería Natys",
+   "distancia_m": 1226,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229355",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Reserva de San Agustín",
+   "distancia_m": 1226,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943229356",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Castilla Reservado",
+   "distancia_m": 1227,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234363",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1229,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661875",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1230,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305182096",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Iglesia Unir",
+   "distancia_m": 1231,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543168183",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1232,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599219",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1233,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2739045343",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1235,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110627",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Valladolid",
+   "distancia_m": 1237,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599221",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1241,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235610",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "IED Salucoop Sur",
+   "distancia_m": 1244,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322118",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1260,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234372",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1261,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5140549553",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1262,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/493263234",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque de Castilla",
+   "distancia_m": 1262,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411159449",
+   "categoria": "comercio",
+   "tipo": "peluquería",
+   "nombre": null,
+   "distancia_m": 1266,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160769",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1267,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128348403",
+   "categoria": "comercio",
+   "tipo": "papelería",
+   "nombre": null,
+   "distancia_m": 1271,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653304782",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1271,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160771",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1272,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322120",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1276,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128348402",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": null,
+   "distancia_m": 1279,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322119",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1281,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1353573379",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1284,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/498450725",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Pista de Patinaje Ciudad Tintal",
+   "distancia_m": 1289,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128348332",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1291,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149187166",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1292,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1190046811",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1292,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152084",
+   "categoria": "comercio",
+   "tipo": "sastrería",
+   "nombre": "Clínica del vestido Mi Costurero",
+   "distancia_m": 1293,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1353573378",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1299,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152088",
+   "categoria": "comercio",
+   "tipo": "lavandería",
+   "nombre": "Lavaseco",
+   "distancia_m": 1305,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305181833",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": "Parqueadero SITP",
+   "distancia_m": 1307,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/407502379",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Codema IED",
+   "distancia_m": 1309,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/661309374",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1310,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241832361",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria",
+   "distancia_m": 1312,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/408490805",
+   "categoria": "transporte",
+   "tipo": "cicloparqueadero",
+   "nombre": null,
+   "distancia_m": 1312,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1353573377",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1314,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322123",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1316,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319610777",
+   "categoria": "comercio",
+   "tipo": "materiales de construcción",
+   "nombre": "Homecenter",
+   "distancia_m": 1321,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538364675",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Institucion Educativa Distrital San Jose de Castilla SEDE A",
+   "distancia_m": 1325,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241832348",
+   "categoria": "comercio",
+   "tipo": "tienda de ropa",
+   "nombre": "Mellos",
+   "distancia_m": 1326,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1208057515",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1327,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241832347",
+   "categoria": "comercio",
+   "tipo": "papelería",
+   "nombre": "Yanida",
+   "distancia_m": 1332,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241832345",
+   "categoria": "salud",
+   "tipo": "odontología",
+   "nombre": "Dentiart",
+   "distancia_m": 1337,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653304765",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1337,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3390551697",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 1340,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/529285265",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Ciudad Tintal II",
+   "distancia_m": 1340,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/554570980",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1341,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253042440",
+   "categoria": "comercio",
+   "tipo": "ferretería",
+   "nombre": "DistriArango",
+   "distancia_m": 1342,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653304770",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1342,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/408490803",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1343,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319611482",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1344,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241931224",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Buckingham",
+   "distancia_m": 1345,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749075944",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1345,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234375",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1346,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1208057506",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1346,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241931223",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "El Brasero de la 38",
+   "distancia_m": 1350,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149187172",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1351,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235611",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Calandaima",
+   "distancia_m": 1352,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241931222",
+   "categoria": "servicios",
+   "tipo": "banco",
+   "nombre": "Banco Compartir",
+   "distancia_m": 1354,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661862",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque de Castilla",
+   "distancia_m": 1354,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152090",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Pan Hogar",
+   "distancia_m": 1356,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5253042439",
+   "categoria": "comercio",
+   "tipo": "zapatería",
+   "nombre": "Rochi",
+   "distancia_m": 1357,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625599220",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1357,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543160770",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1360,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555405",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1360,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/8925191023",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1364,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5142202854",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1366,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152093",
+   "categoria": "comercio",
+   "tipo": "electrónica",
+   "nombre": "The Business",
+   "distancia_m": 1366,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152095",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": null,
+   "distancia_m": 1373,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411102574",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1380,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152097",
+   "categoria": "comercio",
+   "tipo": "tienda de regalos",
+   "nombre": "Disney",
+   "distancia_m": 1380,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5241931221",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Farmasalud de la 38",
+   "distancia_m": 1381,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538364674",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1381,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642924755",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1385,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454344",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1389,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110629",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Pq. Residencial Castilla Real",
+   "distancia_m": 1394,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555408",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1396,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152100",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Juarez",
+   "distancia_m": 1397,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411156117",
+   "categoria": "alimentacion",
+   "tipo": "heladería",
+   "nombre": "La Gelateria",
+   "distancia_m": 1397,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1445782565",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1397,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985915",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1399,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651172622",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1400,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152102",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Comidas rapidas Sabor Costeño",
+   "distancia_m": 1402,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152105",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Tsunami",
+   "distancia_m": 1407,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848306",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Castilla",
+   "distancia_m": 1408,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152108",
+   "categoria": "alimentacion",
+   "tipo": "bar",
+   "nombre": "Monte Castilla Bar",
+   "distancia_m": 1410,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148923",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1410,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555407",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1411,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152110",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Monte Castilla",
+   "distancia_m": 1413,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4547345189",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1415,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/50343152",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1415,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/407507983",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1415,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152113",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Maria Kanela",
+   "distancia_m": 1416,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411152116",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Comerca",
+   "distancia_m": 1423,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/131281428",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio I.E.D. Castilla",
+   "distancia_m": 1425,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1562555406",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1425,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322134",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1426,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/183486637",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1426,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235612",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. El Paraíso Bosa",
+   "distancia_m": 1428,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4150025094",
+   "categoria": "comercio",
+   "tipo": "taller de carros",
+   "nombre": "Ingenergia",
+   "distancia_m": 1433,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653311620",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1434,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5142202591",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1436,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985914",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1445,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1016234374",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1445,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217584089",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1452,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642968779",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1452,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1448674661",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1458,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749075947",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1459,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653311621",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1467,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60760261",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1468,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2489012003",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 1470,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251002507",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Farma Ya",
+   "distancia_m": 1470,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/305182744",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Distrital Rodrigo de Triana",
+   "distancia_m": 1471,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848322",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "El Porvenir",
+   "distancia_m": 1472,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1445172469",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Paradero Alimentador 8-3 Castilla",
+   "distancia_m": 1473,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1208057490",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1474,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411155406",
+   "categoria": "educacion",
+   "tipo": "jardín infantil",
+   "nombre": "Gimnasio Maria Luisa Tricheth",
+   "distancia_m": 1475,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/486798931",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1477,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985912",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1478,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251002508",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "Surtifruver",
+   "distancia_m": 1481,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13943235613",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "IEDIT Rodrigo de triana",
+   "distancia_m": 1481,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454337",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": null,
+   "distancia_m": 1485,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642985913",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1487,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538365517",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1491,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1448674662",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1491,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/529305278",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1506,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/538365516",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1507,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136128",
+   "categoria": "servicios",
+   "tipo": "policía",
+   "nombre": "CAI Castilla",
+   "distancia_m": 1514,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/11113082126",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1517,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110638",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Castilla Real",
+   "distancia_m": 1527,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/11113082031",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1531,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1374189202",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1533,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1197842265",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1536,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1374189201",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1536,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217578991",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1537,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653310658",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1540,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1197842281",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1543,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1272082829",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1544,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1197842285",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1548,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1230755814",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Distrital Nueva Castilla",
+   "distancia_m": 1550,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3902469630",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Pquia. Jesús Amor Misericordioso",
+   "distancia_m": 1553,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/411099453",
+   "categoria": "educacion",
+   "tipo": "instituto",
+   "nombre": "Colegio Agustiniano Tagaste",
+   "distancia_m": 1557,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454350",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1558,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26696807",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Surti Mayorista",
+   "distancia_m": 1561,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543201044",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Sfarma Drogueriía",
+   "distancia_m": 1562,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1174165784",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Parroquia San Pedro Claver",
+   "distancia_m": 1568,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3273100913",
+   "categoria": "servicios",
+   "tipo": "cajero",
+   "nombre": "Bancolombia",
+   "distancia_m": 1572,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/59244270",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Iglesia Jesús Amor Misericordioso",
+   "distancia_m": 1575,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454348",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1576,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3273100914",
+   "categoria": "servicios",
+   "tipo": "cajero",
+   "nombre": "Citibank",
+   "distancia_m": 1577,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3273100915",
+   "categoria": "servicios",
+   "tipo": "cajero",
+   "nombre": "Davivienda",
+   "distancia_m": 1578,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4449759789",
+   "categoria": "comercio",
+   "tipo": "tienda de fotografía",
+   "nombre": "Maxifoto",
+   "distancia_m": 1578,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/175528060",
+   "categoria": "educacion",
+   "tipo": "universidad",
+   "nombre": "UniAgustiniana",
+   "distancia_m": 1581,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148915",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1581,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/962454349",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1581,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1174165786",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Colsubsidio",
+   "distancia_m": 1581,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4567971590",
+   "categoria": "comercio",
+   "tipo": "almacén por departamentos",
+   "nombre": "castilla sport E.C",
+   "distancia_m": 1587,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148916",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1591,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4567967490",
+   "categoria": "comercio",
+   "tipo": "almacén por departamentos",
+   "nombre": "castilla sport E.C",
+   "distancia_m": 1592,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642968775",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1597,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4128376592",
+   "categoria": "transporte",
+   "tipo": "terminal de buses",
+   "nombre": "uniagustiniana",
+   "distancia_m": 1598,
+   "accesible_silla_ruedas": "yes"
+  },
+  {
+   "id": "node/292949941",
+   "categoria": "servicios",
+   "tipo": "cajero",
+   "nombre": "Banco Popular",
+   "distancia_m": 1600,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/414819235",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "IED Gabriel Betancourt Mejia Sede B",
+   "distancia_m": 1607,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148914",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1608,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136121",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1609,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3902469623",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Castilla",
+   "distancia_m": 1612,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5682965021",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Fanny Herreño",
+   "distancia_m": 1613,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/650320869",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Festytortas",
+   "distancia_m": 1616,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/568768023",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1620,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839133",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1621,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642968774",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1622,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13705604063",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Universidad Agustiniana",
+   "distancia_m": 1623,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/624747018",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1623,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1445782568",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1625,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110636",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Humedal de Techo",
+   "distancia_m": 1629,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2501848311",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Bavaria",
+   "distancia_m": 1634,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/486784812",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1634,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/568768022",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1646,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148917",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1646,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643148918",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1647,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/568768024",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1652,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/1230756551",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Distrital Rodrigo de Triana - Sede B",
+   "distancia_m": 1656,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/652164639",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": null,
+   "distancia_m": 1661,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/545692455",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1662,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251194608",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "La Poche",
+   "distancia_m": 1668,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/412171133",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio General Gustavo Rojas Pinilla",
+   "distancia_m": 1670,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136136",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1671,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/75590200",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Zapatoca",
+   "distancia_m": 1673,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251054605",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Eliut",
+   "distancia_m": 1679,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26696813",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1686,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543192208",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "Cafeteria \"Yelus\"",
+   "distancia_m": 1686,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/486785460",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Castilla Real Etapa C",
+   "distancia_m": 1701,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6338458287",
+   "categoria": "comercio",
+   "tipo": "agencia de viajes",
+   "nombre": "@UKASA",
+   "distancia_m": 1702,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668177",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 1703,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/674136138",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1703,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653312152",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1704,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/568768026",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1705,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174292002",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. El Paraíso",
+   "distancia_m": 1711,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653310508",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1715,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149301601",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1723,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149180146",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1725,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1275046500",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1727,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839135",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "DON SALVADOR",
+   "distancia_m": 1735,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5534529224",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "QUC",
+   "distancia_m": 1743,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839132",
+   "categoria": "comercio",
+   "tipo": "llantería",
+   "nombre": "MONTA LLANTAS EL SANTANDERINO",
+   "distancia_m": 1747,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322114",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1748,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749076308",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1748,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322131",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1750,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149301602",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1764,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322132",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1767,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322115",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1769,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26661925",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Polideportivo Castilla",
+   "distancia_m": 1780,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322133",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1784,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668176",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 1786,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14178110631",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Villa Alsacia",
+   "distancia_m": 1789,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322116",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1789,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319942177",
+   "categoria": "educacion",
+   "tipo": "jardín infantil",
+   "nombre": "Jardín Infantil El Caracol",
+   "distancia_m": 1799,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/624631257",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1801,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319890402",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1807,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322127",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1808,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322113",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1809,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839125",
+   "categoria": "comercio",
+   "tipo": "dulcería",
+   "nombre": "DULCERIA COLOMBINA",
+   "distancia_m": 1809,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668175",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 1813,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60322128",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1824,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/392078746",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1824,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653299191",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1827,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839127",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "MINI MERCADO BELLA-VISTA",
+   "distancia_m": 1829,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1190046820",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 1836,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839096",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": "Salón Comunal del Barrio Bella-Vista",
+   "distancia_m": 1837,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668174",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 1839,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1291540348",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1839,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/749113978",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1842,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651770908",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1847,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/562333533",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 1850,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839098",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": null,
+   "distancia_m": 1858,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174277400",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Ciudad de Cali",
+   "distancia_m": 1860,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839111",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "ALASKA",
+   "distancia_m": 1860,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26696814",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Central de Villa Alsacia",
+   "distancia_m": 1863,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839116",
+   "categoria": "alimentacion",
+   "tipo": "fruver",
+   "nombre": "LA PAISA",
+   "distancia_m": 1867,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1291540350",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1870,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2439962084",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 1871,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13705604056",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Santa Catalina",
+   "distancia_m": 1876,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839115",
+   "categoria": "comercio",
+   "tipo": "salón de belleza",
+   "nombre": "MARILYNS",
+   "distancia_m": 1878,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/392078745",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1881,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217581558",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "Centro Misionero Betesda Sede El Millón de Almas",
+   "distancia_m": 1882,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319890307",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Condominios de Tierra Buena",
+   "distancia_m": 1891,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1061941898",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1894,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/371839114",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": "SALÓN DEL REINO DE JEHOVA",
+   "distancia_m": 1897,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13705604055",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. El Tintal",
+   "distancia_m": 1901,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543431318",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Drogueria Jhadse",
+   "distancia_m": 1904,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3902469627",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Liceo Mayor Andino",
+   "distancia_m": 1912,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/642968771",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": "PAS Buenavista",
+   "distancia_m": 1915,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1304458302",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1931,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1322004629",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1931,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1291540353",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 1934,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/42073196",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1942,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606635794",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "M & N",
+   "distancia_m": 1944,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1179883678",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 1946,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/583724963",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1951,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1190046824",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "Terpel",
+   "distancia_m": 1953,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248040",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "El Brazon Ardiente",
+   "distancia_m": 1964,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248041",
+   "categoria": "comercio",
+   "tipo": "repuestos de carros",
+   "nombre": "El Ciclon",
+   "distancia_m": 1967,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1531763309",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1971,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248046",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "La Esquina Soatense",
+   "distancia_m": 1977,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217696984",
+   "categoria": "comercio",
+   "tipo": "taller de carros",
+   "nombre": "La Quintarueda",
+   "distancia_m": 1977,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3753837662",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": null,
+   "distancia_m": 1979,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/583724962",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1980,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1322004630",
+   "categoria": "servicios",
+   "tipo": "salón comunal",
+   "nombre": null,
+   "distancia_m": 1990,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/493263667",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque alsacia",
+   "distancia_m": 1992,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/42072990",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Cafam Buenavista",
+   "distancia_m": 1993,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1531763308",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1993,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248079",
+   "categoria": "comercio",
+   "tipo": "repuestos de carros",
+   "nombre": "Los Andes",
+   "distancia_m": 1995,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/836475478",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "surtimax",
+   "distancia_m": 1995,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149180144",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1997,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651764575",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 1999,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5250725316",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "Tostao’",
+   "distancia_m": 2009,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/13705604051",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Pq. Industrial Alsacia",
+   "distancia_m": 2009,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248051",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Pharma Home's",
+   "distancia_m": 2012,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668172",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2016,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/9936310212",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": null,
+   "distancia_m": 2042,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174292010",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Parque Dindalito",
+   "distancia_m": 2043,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248073",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Pollos & Sopas",
+   "distancia_m": 2045,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/11809985416",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Vergel Occidental",
+   "distancia_m": 2046,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2377574011",
+   "categoria": "salud",
+   "tipo": "droguería",
+   "nombre": "Droguería del Parque",
+   "distancia_m": 2049,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/653299192",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2051,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606668173",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2057,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251246204",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Bukey",
+   "distancia_m": 2058,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251246199",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "La Parrilla Del Santandereano",
+   "distancia_m": 2068,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/252922865",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2073,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174292004",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "CED Cafam Bellavista",
+   "distancia_m": 2074,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248056",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Chispas & Pollo",
+   "distancia_m": 2078,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251177569",
+   "categoria": "alimentacion",
+   "tipo": "panadería",
+   "nombre": "Pan y Rieuras",
+   "distancia_m": 2081,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251177574",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Chicken Krons",
+   "distancia_m": 2086,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339045",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2094,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1207325712",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2097,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651362059",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": null,
+   "distancia_m": 2099,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248035",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "SurtiMAX",
+   "distancia_m": 2100,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/26697096",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Rincón de los Ángeles-Canchas Sinteticas",
+   "distancia_m": 2110,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543202484",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 2112,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251177560",
+   "categoria": "comercio",
+   "tipo": "peluquería",
+   "nombre": "Salon In",
+   "distancia_m": 2115,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339043",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2115,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/108736630",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2118,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/643149016",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2118,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251177555",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Paguemenos",
+   "distancia_m": 2121,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606635795",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2121,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251246220",
+   "categoria": "comercio",
+   "tipo": "lavandería",
+   "nombre": "Perla Matica",
+   "distancia_m": 2124,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543189143",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2125,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251177580",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "Surtido De Aves 22",
+   "distancia_m": 2127,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217581560",
+   "categoria": "comercio",
+   "tipo": "taller de carros",
+   "nombre": null,
+   "distancia_m": 2129,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651362058",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2129,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248061",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Del Huerto",
+   "distancia_m": 2132,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606644787",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2134,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339042",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2137,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606635796",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2138,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606635797",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Autoservicio surtigangas",
+   "distancia_m": 2139,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1516732782",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 2140,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217581574",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2142,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174292008",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "IED Villa Dindalito",
+   "distancia_m": 2143,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/422725987",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2159,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1516732781",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2161,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339047",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 2162,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1303487342",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2162,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543194760",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Gran Fruver La Huerta",
+   "distancia_m": 2175,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339040",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2177,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251248068",
+   "categoria": "alimentacion",
+   "tipo": "cafetería",
+   "nombre": "La Promesa",
+   "distancia_m": 2181,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/814304003",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Cooratiendas",
+   "distancia_m": 2183,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149180132",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 2186,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5404620421",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "gallina",
+   "distancia_m": 2189,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651369850",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Dindalito Bellavista",
+   "distancia_m": 2193,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/554570979",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2197,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "relation/14489752",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 2202,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319875767",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2216,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217581575",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2221,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606604389",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "Asadero Surtipollo",
+   "distancia_m": 2226,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/14174292006",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Parque Dindalito Bellavista",
+   "distancia_m": 2242,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319875609",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Tierra Buena",
+   "distancia_m": 2257,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/645764439",
+   "categoria": "educacion",
+   "tipo": "colegio",
+   "nombre": "Colegio Eduardo Umaña Luna IED",
+   "distancia_m": 2258,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/422725983",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2261,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1088488798",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2261,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1149180141",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 2264,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606581382",
+   "categoria": "comercio",
+   "tipo": "ferretería",
+   "nombre": "Ferretería y electricos el albañil",
+   "distancia_m": 2268,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1019712083",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2269,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/422725984",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": null,
+   "distancia_m": 2271,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5502955757",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "El Flaco",
+   "distancia_m": 2275,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/625549391",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2275,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/551339039",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2277,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1088488797",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2278,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/319875686",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2283,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1019712082",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2291,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651369846",
+   "categoria": "servicios",
+   "tipo": "policía",
+   "nombre": "CAI Bellavista",
+   "distancia_m": 2295,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1088488796",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2295,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5251246215",
+   "categoria": "alimentacion",
+   "tipo": "carnicería",
+   "nombre": "Distribudora de Carnes Finas",
+   "distancia_m": 2299,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/863098139",
+   "categoria": "servicios",
+   "tipo": "plaza de mercado",
+   "nombre": "Megamercado la Despensa Patio Bonito",
+   "distancia_m": 2302,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606615470",
+   "categoria": "alimentacion",
+   "tipo": "tienda de barrio",
+   "nombre": "Supertienda mendoza",
+   "distancia_m": 2304,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1019712080",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2313,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/543202487",
+   "categoria": "alimentacion",
+   "tipo": "restaurante",
+   "nombre": "La Estancia",
+   "distancia_m": 2337,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606652485",
+   "categoria": "alimentacion",
+   "tipo": "comida rápida",
+   "nombre": "La llamita tolimense",
+   "distancia_m": 2347,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/60757476",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2357,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606652486",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2366,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2372217268",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "AV. Cali - Hayuelos 5",
+   "distancia_m": 2371,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/5250748896",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Surtifruver La Rebaja",
+   "distancia_m": 2373,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/7606652487",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "SITP",
+   "distancia_m": 2395,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/852240223",
+   "categoria": "alimentacion",
+   "tipo": "supermercado",
+   "nombre": "Justo y Bueno",
+   "distancia_m": 2450,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/477212467",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": null,
+   "distancia_m": 2465,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651752980",
+   "categoria": "servicios",
+   "tipo": "lugar de culto",
+   "nombre": null,
+   "distancia_m": 2477,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1019711253",
+   "categoria": "parques",
+   "tipo": "parque infantil",
+   "nombre": null,
+   "distancia_m": 2504,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/640685187",
+   "categoria": "parques",
+   "tipo": "cancha",
+   "nombre": null,
+   "distancia_m": 2524,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301994094",
+   "categoria": "transporte",
+   "tipo": "paradero / plataforma",
+   "nombre": null,
+   "distancia_m": 2527,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651752983",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque La Rivera",
+   "distancia_m": 2528,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1015822274",
+   "categoria": "transporte",
+   "tipo": "estación",
+   "nombre": "Gibraltar",
+   "distancia_m": 2533,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/1301994093",
+   "categoria": "transporte",
+   "tipo": "paradero / plataforma",
+   "nombre": null,
+   "distancia_m": 2538,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/83886248",
+   "categoria": "alimentacion",
+   "tipo": "carnicería",
+   "nombre": null,
+   "distancia_m": 2548,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651369839",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": null,
+   "distancia_m": 2558,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/362859021",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": null,
+   "distancia_m": 2602,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/717383117",
+   "categoria": "comercio",
+   "tipo": "venta de carros",
+   "nombre": "CIVETCHI CALLE 13",
+   "distancia_m": 2683,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/217698687",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": "Colombia",
+   "distancia_m": 2708,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6937743607",
+   "categoria": "servicios",
+   "tipo": "oficina de correo",
+   "nombre": "Libertadores - Carga y Encomiendas",
+   "distancia_m": 2734,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/6937743608",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "Centro Camionero",
+   "distancia_m": 2736,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/8104145050",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br El Tintal II",
+   "distancia_m": 2759,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2498514976",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Vereda El Tintal Urbano",
+   "distancia_m": 2790,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4706010744",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Hayuelos Occidental",
+   "distancia_m": 2793,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/8104145052",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Vereda El Tintal Urbano",
+   "distancia_m": 2801,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/2498514868",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Prado Grande",
+   "distancia_m": 2824,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/717378484",
+   "categoria": "comercio",
+   "tipo": "repuestos de carros",
+   "nombre": "IMPARDIESEL S.A",
+   "distancia_m": 2833,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/3482955798",
+   "categoria": "transporte",
+   "tipo": "paradero de bus",
+   "nombre": "Br. Prado Grande",
+   "distancia_m": 2841,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/651186210",
+   "categoria": "parques",
+   "tipo": "parque",
+   "nombre": "Parque Metropolitano Gibraltar",
+   "distancia_m": 2848,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/477212461",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "EDS Calle 13",
+   "distancia_m": 2849,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/477212462",
+   "categoria": "otros",
+   "tipo": "otro",
+   "nombre": "EDS Calle 13",
+   "distancia_m": 2853,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "node/4941363524",
+   "categoria": "servicios",
+   "tipo": "oficina de correo",
+   "nombre": "Envía",
+   "distancia_m": 2870,
+   "accesible_silla_ruedas": null
+  },
+  {
+   "id": "way/362859022",
+   "categoria": "transporte",
+   "tipo": "parqueadero",
+   "nombre": "Patio de Fontibón",
+   "distancia_m": 3077,
+   "accesible_silla_ruedas": null
   }
  ],
  "vacios": {
-  "vias_peatonales_total": 144,
-  "vias_peatonales_km": 16.21,
+  "vias_peatonales_total": 969,
+  "vias_peatonales_km": 101.23,
   "vias_con_dato_silla_ruedas": 0,
   "pct_vias_con_dato_silla_ruedas": 0.0,
-  "vias_con_dato_superficie": 46,
-  "pct_vias_con_dato_superficie": 31.9,
-  "lugares_total": 128,
-  "lugares_sin_nombre": 98,
-  "lugares_con_dato_silla_ruedas": 3,
+  "vias_con_dato_superficie": 175,
+  "pct_vias_con_dato_superficie": 18.1,
+  "vias_con_dato_iluminacion": 3,
+  "pct_vias_con_dato_iluminacion": 0.3,
+  "lugares_total": 760,
+  "lugares_sin_nombre": 432,
+  "lugares_con_dato_silla_ruedas": 5,
   "ids_vias_sin_dato_silla_ruedas": [
+   "way/41975381",
+   "way/41975446",
+   "way/49885859",
+   "way/49885860",
+   "way/49885861",
+   "way/49903148",
+   "way/50342855",
+   "way/50342858",
+   "way/50343001",
+   "way/59244226",
+   "way/59244227",
+   "way/59244236",
+   "way/59244239",
+   "way/59244244",
+   "way/59244249",
+   "way/59244302",
+   "way/59244303",
+   "way/59878498",
+   "way/59878709",
+   "way/59878710",
+   "way/59878732",
+   "way/59878742",
+   "way/60322105",
+   "way/60322117",
+   "way/60322129",
+   "way/62037994",
+   "way/62038023",
    "way/74063370",
    "way/90693860",
+   "way/91092888",
+   "way/91092973",
+   "way/91093083",
+   "way/91093192",
+   "way/92415570",
+   "way/167700576",
    "way/167989295",
+   "way/167989311",
+   "way/168137765",
+   "way/169069310",
+   "way/169069419",
+   "way/169069420",
+   "way/169069421",
+   "way/169070181",
    "way/175788993",
+   "way/178740990",
+   "way/179188154",
+   "way/179188840",
+   "way/179188841",
+   "way/179215462",
+   "way/183797222",
+   "way/183797670",
+   "way/229125375",
+   "way/247331454",
+   "way/247331461",
+   "way/247340132",
+   "way/247350790",
+   "way/247511785",
    "way/247511798",
+   "way/247511803",
+   "way/247511812",
+   "way/247511816",
+   "way/247511818",
+   "way/247511819",
+   "way/247511820",
+   "way/247511821",
+   "way/247511822",
+   "way/247511823",
+   "way/247511824",
+   "way/247511826",
+   "way/247546446",
    "way/256801517",
    "way/319937757",
+   "way/319937758",
+   "way/319937759",
    "way/319938282",
+   "way/352341109",
+   "way/354998909",
+   "way/354998910",
+   "way/354998911",
+   "way/498445644",
+   "way/551339049",
+   "way/551339050",
    "way/551339069",
    "way/551339070",
    "way/551339076",
+   "way/623554150",
    "way/623577537",
    "way/623577538",
+   "way/623590083",
+   "way/624631259",
+   "way/624631260",
+   "way/624631261",
+   "way/625209286",
+   "way/625209287",
+   "way/625470494",
+   "way/625470495",
+   "way/625470496",
+   "way/625470497",
+   "way/625470498",
+   "way/625470499",
+   "way/625470500",
+   "way/625470501",
+   "way/625470502",
+   "way/625470503",
+   "way/625470504",
+   "way/625470506",
+   "way/625470507",
+   "way/625470508",
+   "way/625470509",
+   "way/625470511",
+   "way/625470512",
+   "way/625470515",
+   "way/625470517",
+   "way/625472582",
+   "way/625475695",
+   "way/625481294",
+   "way/625481295",
+   "way/625562390",
+   "way/625569883",
    "way/625569904",
    "way/625569906",
    "way/625569908",
@@ -1089,33 +6254,355 @@
    "way/625569914",
    "way/625569915",
    "way/625590893",
+   "way/625594179",
+   "way/625594180",
+   "way/625594181",
+   "way/625594184",
+   "way/625599203",
+   "way/625599208",
+   "way/625599212",
+   "way/625979707",
    "way/641019935",
    "way/641969226",
+   "way/642626049",
+   "way/642626051",
+   "way/642629787",
+   "way/642629789",
+   "way/642629792",
+   "way/642924756",
    "way/642968764",
+   "way/642968770",
+   "way/642968781",
+   "way/642968786",
+   "way/642968787",
+   "way/642968788",
+   "way/642968789",
+   "way/642968790",
+   "way/642968791",
+   "way/642968792",
+   "way/642968793",
+   "way/642968794",
+   "way/642968795",
+   "way/642968796",
+   "way/642968798",
+   "way/642968799",
+   "way/642968800",
+   "way/642968801",
+   "way/642985898",
+   "way/642985899",
    "way/642985999",
    "way/642986000",
+   "way/642986002",
+   "way/642986003",
+   "way/642986004",
+   "way/642986005",
+   "way/642986006",
+   "way/642986007",
+   "way/642986010",
+   "way/642986011",
+   "way/642986012",
+   "way/642986013",
+   "way/642986014",
    "way/642986015",
+   "way/642986016",
+   "way/642986017",
+   "way/642986018",
    "way/642986019",
+   "way/642986020",
+   "way/642986021",
+   "way/642986022",
+   "way/642986023",
+   "way/642986024",
+   "way/642986025",
+   "way/642986028",
+   "way/642986030",
    "way/643003023",
+   "way/645404693",
+   "way/651138546",
+   "way/651148480",
+   "way/651172621",
+   "way/651185323",
+   "way/651362060",
+   "way/651363561",
+   "way/651363562",
+   "way/651363564",
+   "way/651368199",
+   "way/651368204",
+   "way/651368213",
+   "way/651368233",
+   "way/651368239",
+   "way/651368247",
+   "way/651368259",
+   "way/651368267",
+   "way/651368286",
+   "way/651369845",
+   "way/651369847",
+   "way/651369848",
+   "way/651369849",
+   "way/651369851",
+   "way/651369959",
+   "way/651370950",
+   "way/651370951",
    "way/651386443",
+   "way/651752981",
+   "way/651763938",
+   "way/651763941",
+   "way/651763942",
+   "way/651763943",
+   "way/651763945",
+   "way/651763949",
+   "way/651763952",
+   "way/651763953",
+   "way/651763954",
+   "way/651763955",
+   "way/651770909",
+   "way/651770910",
+   "way/651770915",
+   "way/651770916",
+   "way/651770917",
+   "way/651770918",
+   "way/651770919",
+   "way/651770920",
+   "way/651770921",
+   "way/651770922",
+   "way/651770923",
+   "way/651770924",
+   "way/651770925",
+   "way/651770927",
+   "way/652164630",
+   "way/652164634",
+   "way/652164636",
+   "way/652164642",
+   "way/652164948",
+   "way/652164949",
+   "way/652164950",
+   "way/652166233",
+   "way/652166234",
+   "way/652166236",
+   "way/652166237",
+   "way/652166238",
+   "way/652166239",
+   "way/652166242",
+   "way/652166317",
+   "way/652166319",
+   "way/652166846",
+   "way/652167984",
+   "way/652167986",
+   "way/652167989",
+   "way/652167991",
+   "way/652167992",
+   "way/652167994",
+   "way/652167995",
+   "way/652167996",
+   "way/652168471",
+   "way/652168473",
+   "way/652168474",
+   "way/652168475",
+   "way/652169524",
+   "way/652169525",
+   "way/652169526",
+   "way/652169527",
+   "way/652169530",
+   "way/652169531",
+   "way/652169532",
+   "way/653299181",
+   "way/653299182",
+   "way/653299186",
+   "way/653299187",
+   "way/653299188",
+   "way/653302662",
+   "way/653302666",
+   "way/653302667",
+   "way/653302668",
+   "way/653304767",
+   "way/653304768",
+   "way/653304769",
+   "way/653304771",
+   "way/653304773",
+   "way/653304779",
+   "way/653304781",
+   "way/653304784",
+   "way/653304785",
+   "way/653310138",
+   "way/653310140",
+   "way/653310141",
+   "way/653310142",
+   "way/653310143",
+   "way/653310145",
+   "way/653310146",
+   "way/653310147",
+   "way/653310148",
+   "way/653310150",
+   "way/653310151",
+   "way/653310152",
+   "way/653310504",
+   "way/653310505",
+   "way/653310506",
+   "way/653310507",
+   "way/653310511",
+   "way/653311619",
+   "way/653311622",
+   "way/653311623",
+   "way/653311624",
+   "way/653311625",
+   "way/653797756",
    "way/674136084",
    "way/674136086",
    "way/674136087",
    "way/674136089",
    "way/674136092",
    "way/674136097",
+   "way/746006116",
+   "way/746006117",
+   "way/746006118",
+   "way/746006119",
+   "way/746791313",
+   "way/746791317",
+   "way/747415502",
+   "way/747415503",
+   "way/747415504",
+   "way/747415505",
+   "way/747415506",
+   "way/747415507",
+   "way/747416170",
+   "way/747418235",
+   "way/747420194",
+   "way/747420195",
+   "way/747420196",
+   "way/747420197",
+   "way/747420198",
+   "way/747420199",
+   "way/747420200",
+   "way/747420674",
+   "way/747420675",
+   "way/747422990",
+   "way/747422991",
+   "way/747422992",
+   "way/747422993",
+   "way/747422994",
+   "way/747422995",
+   "way/747422996",
+   "way/747422997",
+   "way/747423000",
+   "way/747423001",
+   "way/747423002",
+   "way/747423003",
+   "way/747423004",
+   "way/747423005",
+   "way/747423006",
+   "way/747423007",
+   "way/747423008",
+   "way/747423009",
+   "way/748906987",
+   "way/748906988",
+   "way/748906990",
+   "way/748906992",
+   "way/748906993",
+   "way/748906994",
+   "way/748906995",
+   "way/748906997",
+   "way/748906998",
+   "way/749024651",
+   "way/749024652",
+   "way/749024653",
+   "way/749024659",
+   "way/749024663",
+   "way/749024664",
+   "way/749029557",
+   "way/749029558",
+   "way/749029559",
+   "way/749029569",
+   "way/749029570",
    "way/749029573",
    "way/749029576",
+   "way/749029577",
+   "way/749029578",
+   "way/749029579",
+   "way/749029592",
+   "way/749029593",
+   "way/749035467",
+   "way/749035468",
+   "way/749035469",
+   "way/749035480",
+   "way/749035486",
+   "way/749035487",
+   "way/749035488",
+   "way/749035489",
+   "way/749035490",
+   "way/749035491",
+   "way/749035492",
+   "way/749035493",
+   "way/749035504",
    "way/749067344",
+   "way/749075948",
+   "way/749113979",
+   "way/751461554",
    "way/751928343",
+   "way/768583043",
+   "way/801416966",
+   "way/801416967",
+   "way/801416968",
+   "way/801418441",
+   "way/801418442",
    "way/801418444",
    "way/801419482",
    "way/801419483",
    "way/801419484",
    "way/801449760",
+   "way/810379674",
+   "way/814346905",
+   "way/814346906",
+   "way/814348042",
+   "way/814351022",
+   "way/819000208",
+   "way/819000209",
+   "way/819000210",
+   "way/819000211",
+   "way/819000212",
+   "way/828256879",
+   "way/838459566",
+   "way/838459568",
+   "way/838459578",
+   "way/838459580",
+   "way/838459582",
+   "way/838459584",
+   "way/838459585",
+   "way/838459586",
+   "way/838459587",
+   "way/838459588",
+   "way/838459589",
+   "way/863099555",
+   "way/868721762",
+   "way/868721766",
+   "way/870584081",
+   "way/870584082",
+   "way/902895722",
+   "way/940765116",
+   "way/962454341",
+   "way/962454342",
+   "way/985581800",
+   "way/990966483",
+   "way/990966486",
+   "way/990966487",
+   "way/990966488",
+   "way/990966489",
+   "way/990966490",
+   "way/990966491",
+   "way/990966492",
+   "way/990966493",
+   "way/990966494",
+   "way/990967582",
+   "way/991229938",
+   "way/991229939",
+   "way/991229940",
+   "way/991316742",
+   "way/991970854",
    "way/991970855",
    "way/991970856",
+   "way/991970857",
    "way/991970859",
+   "way/991970860",
+   "way/991970861",
    "way/991970863",
    "way/991970864",
    "way/991970865",
@@ -1126,6 +6613,27 @@
    "way/991970870",
    "way/991970871",
    "way/992045132",
+   "way/1010037063",
+   "way/1010037064",
+   "way/1011824287",
+   "way/1012172298",
+   "way/1012207145",
+   "way/1016234364",
+   "way/1016234365",
+   "way/1016234366",
+   "way/1016234367",
+   "way/1016234368",
+   "way/1016234369",
+   "way/1019985121",
+   "way/1019988479",
+   "way/1020504103",
+   "way/1022165944",
+   "way/1022179659",
+   "way/1038323353",
+   "way/1038323354",
+   "way/1053311958",
+   "way/1055962810",
+   "way/1057569742",
    "way/1078130493",
    "way/1078142970",
    "way/1078142971",
@@ -1135,21 +6643,134 @@
    "way/1078161008",
    "way/1078161009",
    "way/1078161023",
+   "way/1079923584",
+   "way/1079923586",
+   "way/1079923588",
    "way/1087260372",
+   "way/1087528612",
+   "way/1092348754",
+   "way/1094276017",
+   "way/1094301631",
+   "way/1096463148",
+   "way/1113743090",
+   "way/1113743098",
+   "way/1113743099",
+   "way/1117916047",
+   "way/1117923542",
+   "way/1117923544",
+   "way/1117923545",
+   "way/1117923546",
+   "way/1117924708",
+   "way/1117924709",
+   "way/1117927750",
+   "way/1117927751",
+   "way/1117927752",
+   "way/1117927753",
+   "way/1117927754",
+   "way/1117927758",
+   "way/1117927759",
+   "way/1117927760",
    "way/1117927761",
+   "way/1117927762",
    "way/1117927763",
    "way/1117927764",
    "way/1117927765",
+   "way/1122301973",
+   "way/1122301974",
+   "way/1122301975",
+   "way/1122301976",
+   "way/1122301979",
+   "way/1122301980",
+   "way/1123806111",
+   "way/1125042417",
+   "way/1125042418",
+   "way/1125042419",
+   "way/1125042420",
    "way/1125044903",
    "way/1125044904",
    "way/1125044905",
    "way/1125044906",
    "way/1125044907",
+   "way/1126105417",
+   "way/1126105418",
+   "way/1126105419",
+   "way/1126107365",
+   "way/1126107366",
+   "way/1126107367",
+   "way/1126107368",
+   "way/1126107369",
+   "way/1126109490",
+   "way/1126109491",
    "way/1126109492",
+   "way/1126109493",
+   "way/1126109494",
+   "way/1126109495",
    "way/1126109497",
+   "way/1126109498",
+   "way/1136808348",
+   "way/1136808352",
+   "way/1136808353",
+   "way/1136808354",
+   "way/1136808355",
+   "way/1136808356",
    "way/1141461055",
    "way/1141461057",
+   "way/1149015298",
+   "way/1149015299",
+   "way/1149015300",
+   "way/1149015308",
+   "way/1149015311",
+   "way/1149015312",
+   "way/1149015313",
+   "way/1149015314",
+   "way/1149015315",
    "way/1149015316",
+   "way/1149015323",
+   "way/1149015324",
+   "way/1149015325",
+   "way/1149015326",
+   "way/1149015327",
+   "way/1149015328",
+   "way/1149015332",
+   "way/1149015333",
+   "way/1149023929",
+   "way/1149180129",
+   "way/1149180130",
+   "way/1149180131",
+   "way/1149180133",
+   "way/1149180134",
+   "way/1149180135",
+   "way/1149180136",
+   "way/1149180137",
+   "way/1149180138",
+   "way/1149180139",
+   "way/1149180140",
+   "way/1149182632",
+   "way/1149182633",
+   "way/1149187167",
+   "way/1149187168",
+   "way/1149187169",
+   "way/1149187170",
+   "way/1149187171",
+   "way/1149187173",
+   "way/1149187174",
+   "way/1149187175",
+   "way/1149187176",
+   "way/1149187177",
+   "way/1149187178",
+   "way/1149187179",
+   "way/1149187180",
+   "way/1149187181",
+   "way/1149187182",
+   "way/1149187183",
+   "way/1149187184",
+   "way/1149301603",
+   "way/1149301604",
+   "way/1149301605",
+   "way/1149301606",
+   "way/1149301607",
+   "way/1149301608",
+   "way/1149301609",
    "way/1160698373",
    "way/1160698374",
    "way/1160698375",
@@ -1166,6 +6787,12 @@
    "way/1160698386",
    "way/1160698387",
    "way/1160698388",
+   "way/1169674216",
+   "way/1169674673",
+   "way/1169674674",
+   "way/1169674927",
+   "way/1169678187",
+   "way/1169678956",
    "way/1169986059",
    "way/1169995859",
    "way/1169998169",
@@ -1181,30 +6808,287 @@
    "way/1171026688",
    "way/1171229685",
    "way/1171229686",
+   "way/1172738424",
+   "way/1172746086",
+   "way/1172746087",
+   "way/1172748179",
+   "way/1172748180",
    "way/1172748803",
+   "way/1172759808",
+   "way/1172761861",
+   "way/1174165787",
+   "way/1174165788",
+   "way/1174165789",
+   "way/1174165790",
+   "way/1174165791",
+   "way/1174165792",
+   "way/1174165793",
+   "way/1174165794",
+   "way/1174165795",
+   "way/1174165796",
+   "way/1177921686",
+   "way/1178199016",
+   "way/1184088526",
+   "way/1184088527",
+   "way/1184568168",
+   "way/1184568169",
+   "way/1184568170",
+   "way/1190046805",
+   "way/1190046806",
+   "way/1190046807",
+   "way/1190046808",
+   "way/1190046809",
+   "way/1190046810",
+   "way/1190046812",
+   "way/1190046814",
+   "way/1190046815",
+   "way/1190046816",
+   "way/1190046817",
+   "way/1190046818",
+   "way/1190046819",
+   "way/1190046823",
+   "way/1196544136",
+   "way/1196544140",
    "way/1197469646",
+   "way/1197472445",
+   "way/1197842266",
+   "way/1197842267",
+   "way/1197842268",
+   "way/1197842269",
+   "way/1197842270",
+   "way/1197842271",
+   "way/1197842272",
+   "way/1197842273",
+   "way/1197842274",
+   "way/1197842275",
+   "way/1197842276",
+   "way/1197842277",
+   "way/1197842278",
+   "way/1197842279",
+   "way/1197842280",
+   "way/1197842286",
+   "way/1197842287",
+   "way/1197842288",
+   "way/1197842289",
+   "way/1197842290",
+   "way/1197842291",
+   "way/1197842297",
+   "way/1197842301",
+   "way/1197842302",
+   "way/1197842303",
+   "way/1197842304",
+   "way/1197842307",
+   "way/1198009777",
+   "way/1198009778",
+   "way/1198009779",
+   "way/1198009780",
+   "way/1198009781",
+   "way/1198009782",
    "way/1198009784",
+   "way/1198009785",
+   "way/1198009787",
+   "way/1198802701",
+   "way/1198803778",
+   "way/1198803779",
+   "way/1207325713",
+   "way/1207325715",
+   "way/1207325718",
+   "way/1207325719",
+   "way/1207325720",
+   "way/1207325723",
+   "way/1207325725",
+   "way/1207325795",
+   "way/1207326275",
+   "way/1207326276",
+   "way/1207326277",
+   "way/1208057476",
+   "way/1208057477",
+   "way/1208057481",
+   "way/1208057482",
+   "way/1208057493",
+   "way/1208057494",
+   "way/1208057511",
+   "way/1208057512",
+   "way/1208057513",
+   "way/1208057514",
+   "way/1209485018",
+   "way/1209485019",
+   "way/1209485020",
+   "way/1209485026",
+   "way/1209485027",
+   "way/1209485031",
+   "way/1209485034",
+   "way/1209495202",
+   "way/1209495204",
+   "way/1209495205",
+   "way/1209495206",
+   "way/1209495207",
+   "way/1209495208",
+   "way/1209495209",
+   "way/1218325541",
+   "way/1218325543",
+   "way/1218325544",
+   "way/1218325545",
+   "way/1218325547",
+   "way/1222834047",
+   "way/1222834048",
+   "way/1222834049",
+   "way/1222834050",
+   "way/1222834051",
+   "way/1222834058",
+   "way/1222834156",
+   "way/1222834311",
+   "way/1223965322",
+   "way/1223965324",
+   "way/1223965329",
+   "way/1223965330",
+   "way/1230750746",
+   "way/1263764721",
+   "way/1264216253",
+   "way/1264216257",
+   "way/1264216258",
+   "way/1270364194",
+   "way/1270364195",
+   "way/1270366556",
+   "way/1275046498",
+   "way/1275052048",
+   "way/1275052049",
+   "way/1275052050",
+   "way/1275052052",
+   "way/1275058635",
+   "way/1275058636",
+   "way/1275347441",
+   "way/1291540349",
+   "way/1291540351",
+   "way/1291540352",
+   "way/1291540354",
+   "way/1291540355",
+   "way/1291540356",
+   "way/1291540357",
+   "way/1291540358",
+   "way/1291540359",
+   "way/1291540360",
+   "way/1291540361",
+   "way/1291540362",
+   "way/1291540363",
+   "way/1291540364",
+   "way/1291540365",
+   "way/1291540366",
+   "way/1291540367",
+   "way/1300546298",
+   "way/1300546304",
    "way/1300546305",
    "way/1300546306",
    "way/1300546307",
    "way/1300546308",
+   "way/1300546315",
+   "way/1304458303",
+   "way/1304458304",
+   "way/1304458306",
+   "way/1322004625",
+   "way/1322004626",
+   "way/1322004627",
    "way/1322383896",
+   "way/1322383897",
+   "way/1322383898",
+   "way/1322383899",
    "way/1322383901",
+   "way/1322383904",
    "way/1322383905",
+   "way/1322383906",
+   "way/1353573374",
+   "way/1353573375",
+   "way/1353573376",
+   "way/1368748434",
+   "way/1368748435",
+   "way/1368748436",
+   "way/1368748437",
+   "way/1368748439",
+   "way/1370746006",
+   "way/1370746007",
+   "way/1370746008",
+   "way/1370746010",
+   "way/1374189197",
+   "way/1374189200",
+   "way/1374189204",
+   "way/1374189205",
+   "way/1374189206",
+   "way/1374189207",
+   "way/1374189208",
+   "way/1374189209",
+   "way/1374189210",
+   "way/1374189211",
+   "way/1374189212",
+   "way/1387116483",
+   "way/1387116484",
+   "way/1387116485",
+   "way/1388092776",
+   "way/1388093697",
+   "way/1388093698",
+   "way/1412119250",
+   "way/1412119251",
    "way/1412119252",
    "way/1412119253",
    "way/1412119254",
    "way/1412119255",
+   "way/1412119256",
+   "way/1412119257",
    "way/1412119258",
+   "way/1412528342",
+   "way/1445782566",
+   "way/1445782567",
+   "way/1445782576",
+   "way/1445782577",
+   "way/1445782578",
+   "way/1445782579",
+   "way/1445782580",
+   "way/1445783934",
+   "way/1445783935",
+   "way/1448674657",
+   "way/1448674658",
+   "way/1448674659",
+   "way/1448674660",
+   "way/1448674663",
+   "way/1448674664",
+   "way/1458306747",
+   "way/1458306748",
+   "way/1462093837",
+   "way/1462093840",
+   "way/1462093841",
+   "way/1462100361",
    "way/1462629233",
    "way/1462629234",
    "way/1462629235",
    "way/1462629984",
+   "way/1466561579",
+   "way/1468743929",
+   "way/1469163709",
+   "way/1469163710",
+   "way/1469163711",
+   "way/1469181259",
    "way/1508631251",
+   "way/1516917150",
    "way/1518594467",
    "way/1518594468",
    "way/1518594469",
    "way/1521188517",
+   "way/1523276658",
+   "way/1523276659",
+   "way/1523276660",
+   "way/1523276661",
+   "way/1523276662",
+   "way/1523276663",
+   "way/1523276664",
+   "way/1531763312",
+   "way/1539967016",
+   "way/1543994658",
+   "way/1543994659",
+   "way/1562555409",
+   "way/1562555410",
+   "way/1562555411",
+   "way/1562555412",
+   "way/1562555413",
+   "way/1562555418",
    "way/1570410926",
    "way/1570410931",
    "way/1570410935",

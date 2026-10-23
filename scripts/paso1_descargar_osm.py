@@ -23,7 +23,7 @@ def construir_consulta(bbox):
     b = f"({s},{o},{n},{e})"
     # Puntos de interés: con su centro. Vías peatonales: con su geometría.
     return f"""
-[out:json][timeout:90];
+[out:json][timeout:180];
 (
   nwr["amenity"]{b};
   nwr["healthcare"]{b};
@@ -60,7 +60,7 @@ def main():
                 url,
                 data={"data": consulta},
                 headers={"User-Agent": "OSM-Sense-prototipo/0.1 (SotM Latam 2026)"},
-                timeout=180,
+                timeout=240,
             )
             r.raise_for_status()
             print(f"Respuesta OK desde {url}")

@@ -101,6 +101,7 @@ def main():
     total_vias = len(vias)
     con_wheel = sum(1 for v in vias if "wheelchair" in v["properties"]["tags"])
     con_surface = sum(1 for v in vias if "surface" in v["properties"]["tags"])
+    con_lit = sum(1 for v in vias if "lit" in v["properties"]["tags"])
     largo_total = sum(largo_linea_m(v["geometry"]["coordinates"]) for v in vias)
     pct = lambda a, b: round(100 * a / b, 1) if b else 0.0
 
@@ -111,6 +112,8 @@ def main():
         "pct_vias_con_dato_silla_ruedas": pct(con_wheel, total_vias),
         "vias_con_dato_superficie": con_surface,
         "pct_vias_con_dato_superficie": pct(con_surface, total_vias),
+        "vias_con_dato_iluminacion": con_lit,
+        "pct_vias_con_dato_iluminacion": pct(con_lit, total_vias),
         "lugares_total": len(elementos),
         "lugares_sin_nombre": sum(1 for e in elementos if not e["nombre"]),
         "lugares_con_dato_silla_ruedas": sum(1 for e in elementos if e["accesible_silla_ruedas"]),
