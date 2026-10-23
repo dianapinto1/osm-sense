@@ -1,0 +1,82 @@
+{
+ "modelo": "ninguno (respuestas de EJEMPLO simuladas)",
+ "generado": "2026-10-17T16:06",
+ "aviso": "Datos y respuestas FICTICIOS de ejemplo. Reemplázalos con los pasos 1 a 3.",
+ "respuestas": [
+  {
+   "id": "explicame_zona",
+   "pregunta": "Explícame esta zona",
+   "respuesta": "Cerca encuentras: Centro Médico Ejemplo (centro médico, a 39 m), Iglesia Ejemplo (lugar de culto, a 169 m), un paradero de bus (paradero de bus, a 175 m). Esta información viene de OpenStreetMap y puede estar incompleta.",
+   "respuesta_simple": "Cerca hay 3 lugares, como centro médico.",
+   "ids_citados": [
+    "node/1003",
+    "node/1013",
+    "node/1008"
+   ],
+   "ids_invalidos": [],
+   "datos_faltantes": [
+    "No hay datos de accesibilidad para la mayoría de andenes."
+   ]
+  },
+  {
+   "id": "que_hay_cerca",
+   "pregunta": "¿Qué hay cerca de aquí?",
+   "respuesta": "Cerca encuentras: Centro Médico Ejemplo (centro médico, a 39 m), Iglesia Ejemplo (lugar de culto, a 169 m), un paradero de bus (paradero de bus, a 175 m). Esta información viene de OpenStreetMap y puede estar incompleta.",
+   "respuesta_simple": "Cerca hay 3 lugares, como centro médico.",
+   "ids_citados": [
+    "node/1003",
+    "node/1013",
+    "node/1008"
+   ],
+   "ids_invalidos": [],
+   "datos_faltantes": [
+    "No hay datos de accesibilidad para la mayoría de andenes."
+   ]
+  },
+  {
+   "id": "salud_educacion",
+   "pregunta": "¿Hay servicios de salud o colegios cerca?",
+   "respuesta": "Cerca encuentras: Centro Médico Ejemplo (centro médico, a 39 m), Droguería Ejemplo (droguería, a 239 m), un jardín infantil (jardín infantil, a 240 m). Esta información viene de OpenStreetMap y puede estar incompleta.",
+   "respuesta_simple": "Cerca hay 3 lugares, como centro médico.",
+   "ids_citados": [
+    "node/1003",
+    "node/1004",
+    "node/1002"
+   ],
+   "ids_invalidos": [],
+   "datos_faltantes": [
+    "No hay datos de accesibilidad para la mayoría de andenes."
+   ]
+  },
+  {
+   "id": "tomar_algo",
+   "pregunta": "¿Dónde puedo tomar algo?",
+   "respuesta": "Cerca encuentras: Restaurante Ejemplo (restaurante, a 266 m), Café Ejemplo (cafetería, a 377 m), Panadería Ejemplo (panadería, a 427 m). Esta información viene de OpenStreetMap y puede estar incompleta.",
+   "respuesta_simple": "Cerca hay 3 lugares, como restaurante.",
+   "ids_citados": [
+    "node/1011",
+    "node/1009",
+    "node/1010"
+   ],
+   "ids_invalidos": [],
+   "datos_faltantes": [
+    "No hay datos de accesibilidad para la mayoría de andenes."
+   ]
+  },
+  {
+   "id": "accesibilidad",
+   "pregunta": "¿Puedo moverme por aquí en silla de ruedas?",
+   "respuesta": "Cerca encuentras: Centro Médico Ejemplo (centro médico, a 39 m), un paradero de bus (paradero de bus, a 175 m), un parque infantil (parque infantil, a 194 m). Esta información viene de OpenStreetMap y puede estar incompleta.",
+   "respuesta_simple": "Cerca hay 3 lugares, como centro médico.",
+   "ids_citados": [
+    "node/1003",
+    "node/1008",
+    "node/1006"
+   ],
+   "ids_invalidos": [],
+   "datos_faltantes": [
+    "No hay datos de accesibilidad para la mayoría de andenes."
+   ]
+  }
+ ]
+}
