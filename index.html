@@ -27,13 +27,14 @@
         <p class="sub" id="nombre-zona">Cargando zona…</p>
       </div>
     </div>
-    <button type="button" class="pill" id="btn-ajustes" aria-haspopup="dialog">⚙️ Ajustes</button>
+    <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
   </header>
 
   <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
     <div id="mapa" class="mapa"></div>
     <div class="mapa-controles">
       <button type="button" class="pill flotante" id="btn-donde">📍 ¿Dónde estoy?</button>
+      <button type="button" class="pill flotante" id="btn-mapa" aria-haspopup="dialog">🧩 Lo que falta</button>
       <button type="button" class="pill flotante" id="btn-expandir" aria-expanded="false" aria-controls="franja-mapa">Ampliar mapa</button>
     </div>
   </section>
@@ -45,11 +46,12 @@
   </main>
 
   <footer class="entrada">
-    <div class="ideas" role="group" aria-labelledby="t-ideas">
+    <div class="ideas" id="caja-ideas" role="group" aria-labelledby="t-ideas">
       <span id="t-ideas" class="ideas-titulo">Ideas para preguntar</span>
       <div id="ideas" class="ideas-lista"></div>
     </div>
     <form id="form-chat" class="form-chat">
+      <button type="button" class="ideas-boton" id="btn-ideas" aria-expanded="false" aria-controls="caja-ideas" aria-label="Ideas para preguntar" hidden>💡</button>
       <label for="entrada" class="solo-lectores">Escribe tu pregunta o cuéntale algo al mapa</label>
       <textarea id="entrada" rows="1" placeholder="Pregúntale al mapa…" autocomplete="off"></textarea>
       <button type="submit" class="enviar" id="btn-enviar" aria-label="Enviar">➤</button>
@@ -57,32 +59,65 @@
     </form>
   </footer>
 
-  <dialog id="ajustes" class="hoja" aria-labelledby="t-ajustes">
-    <div class="hoja-cabeza">
-      <h2 id="t-ajustes">Ajustes</h2>
-      <button type="button" class="pill" id="btn-cerrar-ajustes">Cerrar</button>
+  <!-- Inicio: cómo prefiere la persona usar el sitio. Se abre al entrar y con el botón "Accesibilidad". -->
+  <dialog id="inicio" class="hoja inicio" aria-labelledby="t-inicio">
+    <h2 id="t-inicio">¿Cómo prefieres usar OSM Sense?</h2>
+    <p class="inicio-intro">Elige lo que te sirva. Puedes cambiarlo cuando quieras con el botón «♿ Accesibilidad».</p>
+    <button type="button" class="pill" id="btn-leer-inicio">🔊 Escuchar estas opciones</button>
+
+    <div class="perfiles" role="group" aria-label="Perfiles de accesibilidad">
+      <button type="button" class="perfil" data-perfil="escuchar" aria-pressed="false">
+        <span class="perfil-icono" aria-hidden="true">🔊</span>
+        <span><strong>Necesito escuchar</strong><span>Leo en voz alta cada respuesta. Puedes hablarme con el micrófono.</span></span>
+      </button>
+      <button type="button" class="perfil" data-perfil="ver" aria-pressed="false">
+        <span class="perfil-icono" aria-hidden="true">👁️</span>
+        <span><strong>Tengo baja visión</strong><span>Letra más grande y colores de alto contraste.</span></span>
+      </button>
+      <button type="button" class="perfil" data-perfil="sencillo" aria-pressed="false">
+        <span class="perfil-icono" aria-hidden="true">💬</span>
+        <span><strong>Prefiero textos sencillos</strong><span>Respuestas cortas y con palabras fáciles.</span></span>
+      </button>
     </div>
 
-    <section aria-labelledby="t-ver">
-      <h3 id="t-ver">Cómo ver y escuchar</h3>
+    <section aria-labelledby="t-fino" class="bloque">
+      <h3 id="t-fino">Ajuste fino</h3>
       <div class="interruptores">
-        <button type="button" class="interruptor" id="btn-contraste" aria-pressed="false">Alto contraste</button>
-        <button type="button" class="interruptor" id="btn-letra" aria-pressed="false">Letra grande</button>
-        <button type="button" class="interruptor" id="btn-pedagogico" aria-pressed="false">Modo sencillo</button>
         <button type="button" class="interruptor" id="btn-voz" aria-pressed="false">Leer en voz alta</button>
+        <button type="button" class="interruptor" id="btn-letra" aria-pressed="false">Letra grande</button>
+        <button type="button" class="interruptor" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+        <button type="button" class="interruptor" id="btn-pedagogico" aria-pressed="false">Modo sencillo</button>
       </div>
     </section>
 
-    <section aria-labelledby="t-capas">
-      <h3 id="t-capas">Qué hay en el mapa</h3>
-      <ul id="capas" class="capas"></ul>
+    <section aria-labelledby="t-previa" class="bloque vista-previa">
+      <h3 id="t-previa">Vista previa</h3>
+      <div class="msg osm previa">
+        <p class="remitente">OSM Sense</p>
+        <p class="msg-texto" id="previa-texto"></p>
+      </div>
+      <button type="button" class="pill" id="btn-probar-voz">🔊 Probar la voz</button>
     </section>
 
-    <section aria-labelledby="t-vacios" class="vacios">
-      <h3 id="t-vacios">Lo que le falta al mapa</h3>
-      <div id="vacios-datos"></div>
-      <label class="check"><input type="checkbox" id="chk-vacios"> Mostrar vías peatonales sin dato de accesibilidad</label>
+    <button type="button" class="boton-principal empezar" id="btn-empezar">Empezar</button>
+  </dialog>
+
+  <!-- Mapa: capas y lo que le falta al mapa. -->
+  <dialog id="hoja-mapa" class="hoja" aria-labelledby="t-hoja-mapa">
+    <div class="hoja-cabeza">
+      <h2 id="t-hoja-mapa">Lo que le falta al mapa</h2>
+      <button type="button" class="pill" id="btn-cerrar-mapa">Cerrar</button>
+    </div>
+
+    <section aria-label="Cifras de vacíos de información" class="bloque vacios">
+      <div id="vacios-datos" class="cifras"></div>
+      <label class="check"><input type="checkbox" id="chk-vacios"> Resaltar en el mapa las vías peatonales sin dato de accesibilidad</label>
       <a id="btn-nota" class="boton-principal" target="_blank" rel="noopener">📝 Abrir nota en OpenStreetMap</a>
+    </section>
+
+    <section aria-labelledby="t-capas" class="bloque">
+      <h3 id="t-capas">Qué hay en el mapa</h3>
+      <ul id="capas" class="capas"></ul>
     </section>
 
     <p class="nota">Datos © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a> (ODbL).
