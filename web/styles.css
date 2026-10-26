@@ -64,8 +64,10 @@ body.letra-grande { --base: 22px; }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; height: 100%; }
+html { overflow: hidden; }
 body {
-  height: 100dvh; overflow: hidden;
+  /* --alto lo fija app.js con el alto visible real (descuenta el teclado); 100dvh es el respaldo. */
+  height: var(--alto, 100dvh); overflow: hidden; overscroll-behavior: none;
   display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr) auto;
   font-family: var(--font-inter); font-size: var(--base); line-height: 1.5; letter-spacing: -0.013em;
   background: var(--fondo); color: var(--texto);
@@ -104,9 +106,10 @@ body.contraste .logo { display: none; }
   margin: 0; font-family: var(--font-display); font-weight: 500;
   font-size: 1.3em; line-height: 1.1; letter-spacing: -0.03em; color: var(--titulo);
 }
+/* Nombre de la zona: hasta dos líneas, en vez de cortarlo con "…". */
 .marca .sub {
-  margin: 1px 0 0; color: var(--suave); font-size: .75em;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin: 1px 0 0; color: var(--suave); font-size: .72em; line-height: 1.3;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
 }
 
 /* ---------- Botones ---------- */
@@ -141,10 +144,32 @@ body.contraste .pill:hover { background: #000000; }
 }
 .franja-mapa.expandida { height: 70dvh; }
 .mapa { position: absolute; inset: 0; }
+/* Herramientas del mapa en una sola fila arriba: dejan libre casi todo el mapa. */
 .mapa-controles {
-  position: absolute; z-index: 1000; top: 10px; right: 10px;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  position: absolute; z-index: 1000; top: 8px; left: 8px; right: 8px;
+  display: flex; align-items: center; gap: 6px; pointer-events: none;
 }
+.mapa-controles > * { pointer-events: auto; }
+.mapa-controles .pill { padding: 0 14px; font-size: .78em; box-shadow: var(--borde-interior), 0 1px 6px rgba(0, 0, 0, .08); }
+.mapa-controles .icono { width: 48px; padding: 0; margin-left: auto; font-size: 1.2rem; }
+@media (max-width: 380px) { .mapa-controles .pill:not(.icono) { padding: 0 10px; font-size: .74em; } }
+body.letra-grande .mapa-controles .pill span { display: none; }   /* solo el ícono cuando la letra es grande */
+body.letra-grande #btn-donde, body.letra-grande #btn-mapa { width: 48px; padding: 0; font-size: 1.15rem; }
+
+/* Aviso mientras se elige en el mapa la ubicación de una nota. */
+.aviso-mapa {
+  position: absolute; z-index: 1001; left: 8px; right: 8px; bottom: 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 8px 8px 16px; border-radius: 14px;
+  background: var(--principal); color: var(--principal-texto); font-size: .88em; font-weight: 600;
+}
+.aviso-mapa .pill { background: var(--superficie); color: var(--titulo); }
+.franja-mapa.eligiendo .leaflet-container { cursor: crosshair; }
+
+/* Con el teclado abierto en el celular: se oculta el mapa para que la conversación y la caja
+   de texto tengan espacio. Al cerrar el teclado todo vuelve a su lugar. */
+body.teclado .franja-mapa, body.teclado .ideas, body.teclado .contador { display: none !important; }
+body.teclado { grid-template-rows: auto minmax(0, 1fr) auto; }   /* sin la fila del mapa */
 
 /* ---------- Chat ---------- */
 .chat { min-height: 0; display: flex; flex-direction: column; }
@@ -178,6 +203,18 @@ body.contraste .pill:hover { background: #000000; }
 }
 body.contraste .msg.osm { border: 2px solid #ffffff; box-shadow: none; }
 body.contraste .msg.persona { font-weight: 600; }
+
+/* Cifra destacada de la bienvenida. */
+.destacado {
+  display: flex; align-items: center; gap: 12px; margin-top: 14px !important;
+  padding: 12px 14px; border-radius: var(--radio-tarjeta); background: var(--superficie-suave);
+  font-size: .88em; line-height: 1.4; color: var(--cuerpo);
+}
+.destacado .cifra {
+  flex: none; font-family: var(--font-display); font-weight: 500; font-size: 1.9em; line-height: 1;
+  letter-spacing: -0.031em; color: var(--acento);
+}
+body.contraste .destacado { border: 1px solid #ffffff; }
 
 /* Secciones dentro de una respuesta: cada una con su título, separadas con aire. */
 .msg-seccion { margin-top: 16px; }
@@ -263,6 +300,7 @@ body.contraste .alerta { background: #000; color: #ffff00; border: 2px solid #ff
 }
 .ideas-lista::-webkit-scrollbar { display: none; }
 .ideas-lista .pill { padding: 0 14px; font-weight: 500; white-space: nowrap; background: var(--superficie); }
+.ideas-lista .pill.elegida { background: var(--principal); color: var(--principal-texto); box-shadow: none; }
 .form-chat {
   display: flex; align-items: flex-end; gap: 8px;
   max-width: 760px; margin: 0 auto;
@@ -375,7 +413,14 @@ body.contraste .muestra { box-shadow: 0 0 0 2px #ffffff; }
 .perfil[aria-pressed="true"]::after { content: "✓"; content: "✓" / ""; margin-left: auto; font-size: 1.3em; color: var(--principal-texto); }
 body.contraste .perfil { border: 2px solid #ffffff; }
 .vista-previa .msg.previa { max-width: 100%; margin-bottom: 12px; background: var(--superficie-suave); }
-.empezar { width: 100%; justify-content: center; min-height: 56px; margin-top: 16px; font-size: 1em; }
+/* "Empezar" siempre visible al pie de la pantalla de inicio, aunque haya que desplazar las opciones. */
+.hoja-pie {
+  position: sticky; bottom: calc(-1 * max(20px, env(safe-area-inset-bottom)));
+  margin: 16px -16px calc(-1 * max(20px, env(safe-area-inset-bottom)));
+  padding: 12px 16px max(14px, env(safe-area-inset-bottom));
+  background: var(--fondo); box-shadow: inset 0 1px 0 var(--linea);
+}
+.empezar { width: 100%; justify-content: center; min-height: 56px; font-size: 1em; }
 .vacios .check { min-height: var(--tactil); display: flex; gap: 10px; align-items: center; margin: 6px 0 10px; cursor: pointer; font-size: .9em; }
 
 /* ---------- Leaflet ---------- */
