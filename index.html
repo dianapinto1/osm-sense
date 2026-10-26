@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- interactive-widget: al abrir el teclado, Chrome Android encoge la página en vez de taparla o desplazarla -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
   <meta name="theme-color" content="#fbfaf9">
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-23b">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26a">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -33,10 +34,15 @@
 
   <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
     <div id="mapa" class="mapa"></div>
-    <div class="mapa-controles">
-      <button type="button" class="pill flotante" id="btn-donde">📍 ¿Dónde estoy?</button>
-      <button type="button" class="pill flotante" id="btn-mapa" aria-haspopup="dialog">🧩 Lo que falta</button>
-      <button type="button" class="pill flotante" id="btn-expandir" aria-expanded="false" aria-controls="franja-mapa">Ampliar mapa</button>
+    <div class="mapa-controles" role="toolbar" aria-label="Herramientas del mapa">
+      <button type="button" class="pill flotante" id="btn-donde">📍 <span>¿Dónde estoy?</span></button>
+      <button type="button" class="pill flotante" id="btn-mapa" aria-haspopup="dialog">🧩 <span>Lo que falta</span></button>
+      <button type="button" class="pill flotante icono" id="btn-expandir" aria-expanded="false" aria-controls="franja-mapa" aria-label="Ampliar mapa" title="Ampliar mapa">⤢</button>
+    </div>
+    <!-- Se muestra solo mientras la persona elige en el mapa la ubicación de una nota. -->
+    <div class="aviso-mapa" id="aviso-ubicar" role="status" hidden>
+      <span id="aviso-ubicar-texto">Toca el mapa donde va la nota.</span>
+      <button type="button" class="pill" id="btn-cancelar-ubicar">Cancelar</button>
     </div>
   </section>
 
@@ -81,6 +87,15 @@
       </button>
     </div>
 
+    <section aria-labelledby="t-previa" class="bloque vista-previa">
+      <h3 id="t-previa">Así se verán las respuestas</h3>
+      <div class="msg osm previa">
+        <p class="remitente">OSM Sense</p>
+        <p class="msg-texto" id="previa-texto"></p>
+      </div>
+      <button type="button" class="pill" id="btn-probar-voz">🔊 Probar la voz</button>
+    </section>
+
     <section aria-labelledby="t-fino" class="bloque">
       <h3 id="t-fino">Ajuste fino</h3>
       <div class="interruptores">
@@ -91,16 +106,9 @@
       </div>
     </section>
 
-    <section aria-labelledby="t-previa" class="bloque vista-previa">
-      <h3 id="t-previa">Vista previa</h3>
-      <div class="msg osm previa">
-        <p class="remitente">OSM Sense</p>
-        <p class="msg-texto" id="previa-texto"></p>
-      </div>
-      <button type="button" class="pill" id="btn-probar-voz">🔊 Probar la voz</button>
-    </section>
-
-    <button type="button" class="boton-principal empezar" id="btn-empezar">Empezar</button>
+    <div class="hoja-pie">
+      <button type="button" class="boton-principal empezar" id="btn-empezar">Empezar</button>
+    </div>
   </dialog>
 
   <!-- Mapa: capas y lo que le falta al mapa. -->
@@ -126,6 +134,6 @@
   </dialog>
 
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-23b"></script>
+  <script src="app.js?v=2026-10-26a"></script>
 </body>
 </html>

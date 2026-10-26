@@ -47,7 +47,11 @@
 
   // ---------- Mapa ----------
   // preferCanvas: cientos de puntos y vías se dibujan rápido también en celulares.
-  const mapa = L.map("mapa", { zoomControl: true, preferCanvas: true });
+  const mapa = L.map("mapa", { zoomControl: false, preferCanvas: true });
+  // Zoom abajo a la derecha: arriba quedan las herramientas del mapa.
+  L.control.zoom({ position: "bottomright", zoomInTitle: "Acercar", zoomOutTitle: "Alejar" }).addTo(mapa);
+  // Las fichas de los lugares se acomodan para no quedar debajo de la barra de herramientas.
+  L.Popup.prototype.options.autoPanPaddingTopLeft = L.point(12, 68);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '© <a href="https://www.openstreetmap.org/copyright">colaboradores de OpenStreetMap</a>'
@@ -67,8 +71,9 @@
     const p = f.properties;
     if (p.categoria === "via_peatonal") {
       const ll = f.geometry.coordinates.map(c => [c[1], c[0]]);
-      L.polyline(ll, { color: VIA, weight: 3, opacity: .7 }).bindPopup(popup(p)).addTo(vias);
-      if (sinDato.has(p.id)) L.polyline(ll, { color: VACIO, weight: 5, dashArray: "6 6" })
+      // bubblingMouseEvents: false → tocar una vía abre su ficha sin ampliar el mapa a la vez.
+      L.polyline(ll, { color: VIA, weight: 3, opacity: .7, bubblingMouseEvents: false }).bindPopup(popup(p)).addTo(vias);
+      if (sinDato.has(p.id)) L.polyline(ll, { color: VACIO, weight: 5, dashArray: "6 6", bubblingMouseEvents: false })
         .bindPopup(popup(p) + "<br><em>Sin dato de accesibilidad</em>").addTo(viasSinDato);
       estado.porId[p.id] = { latlng: ll[Math.floor(ll.length / 2)], p };
       return;
@@ -76,7 +81,8 @@
     const latlng = [p.centro[0], p.centro[1]];
     const capa = estado.capas[p.categoria] || (estado.capas[p.categoria] = L.layerGroup().addTo(mapa));
     const m = L.circleMarker(latlng, {
-      radius: 7, color: "#ffffff", weight: 2, fillColor: COLORES[p.categoria] || COLORES.otros, fillOpacity: .95
+      radius: 7, color: "#ffffff", weight: 2, fillColor: COLORES[p.categoria] || COLORES.otros, fillOpacity: .95,
+      bubblingMouseEvents: false
     }).bindPopup(popup(p)).bindTooltip(esc(p.nombre || p.tipo));
     m.addTo(capa);
     estado.porId[p.id] = { latlng, p, marcador: m };
@@ -89,12 +95,45 @@
   function expandir(on) {
     franja.classList.toggle("expandida", on);
     btnExp.setAttribute("aria-expanded", String(on));
-    btnExp.textContent = on ? "Reducir mapa" : "Ampliar mapa";
+    btnExp.textContent = on ? "⤡" : "⤢";
+    btnExp.setAttribute("aria-label", on ? "Reducir mapa" : "Ampliar mapa"); btnExp.title = btnExp.getAttribute("aria-label");
     setTimeout(() => mapa.invalidateSize(), 280);   // respaldo si no hay animación
   }
   franja.addEventListener("transitionend", ev => { if (ev.propertyName === "height") mapa.invalidateSize(); });
   btnExp.addEventListener("click", () => expandir(!franja.classList.contains("expandida")));
-  mapa.on("click", () => { if (esMovil() && !franja.classList.contains("expandida")) expandir(true); });
+  mapa.on("click", () => { if (esMovil() && !estado.eligiendo && !franja.classList.contains("expandida")) expandir(true); });
+
+  // ---------- Celular: teclado y foco ----------
+  // En pantallas táctiles no se enfoca la caja de texto por cuenta propia: eso abre el teclado
+  // y tapa la respuesta. Solo se enfoca cuando la persona lo pide (tocarla o "Sí, te cuento").
+  const esTactil = () => matchMedia("(pointer: coarse)").matches;
+  const enfocarEntrada = () => { if (!esTactil()) $("entrada").focus({ preventScroll: true }); };
+  // Alto visible real: con el teclado abierto es menor. La página nunca queda desplazada.
+  const vv = window.visualViewport;
+  function ajustarAlto() {
+    document.body.style.setProperty("--alto", `${Math.round(vv ? vv.height : innerHeight)}px`);
+    if (scrollY || document.documentElement.scrollTop) scrollTo(0, 0);
+  }
+  if (vv) { vv.addEventListener("resize", ajustarAlto); vv.addEventListener("scroll", ajustarAlto); }
+  addEventListener("resize", ajustarAlto); ajustarAlto();
+  const escribiendo = el => el && (el.tagName === "TEXTAREA" || (el.tagName === "INPUT" && el.type === "text"));
+  function modoTeclado() {
+    const on = esMovil() && esTactil() && escribiendo(document.activeElement);
+    if (on === document.body.classList.contains("teclado")) return;
+    document.body.classList.toggle("teclado", on);
+    ajustarAlto();
+    requestAnimationFrame(() => {
+      mapa.invalidateSize();
+      const el = document.activeElement;
+      if (on && el && el.id !== "entrada") el.scrollIntoView({ block: "center" }); else bajar();
+    });
+  }
+  // El teclado aparece y se va con una animación y no todos los celulares avisan el cambio de
+  // tamaño a tiempo: se vuelve a medir varias veces durante el primer segundo.
+  const remedir = () => [100, 300, 600, 1000].forEach(ms => setTimeout(() => { ajustarAlto(); mapa.invalidateSize(); }, ms));
+  // focusout llega antes de que el foco pase al siguiente elemento: se espera un instante.
+  document.addEventListener("focusin", () => { modoTeclado(); remedir(); });
+  document.addEventListener("focusout", () => { setTimeout(modoTeclado, 120); remedir(); });
 
   // ---------- Ubicación ----------
   const marcaYo = L.circleMarker(resumen.punto_central, {
@@ -114,8 +153,9 @@
   }
   btnDonde.addEventListener("click", () => {
     if (!navigator.geolocation) return usarDemo("Este navegador no permite conocer tu ubicación.");
-    btnDonde.disabled = true; btnDonde.textContent = "📍 Buscando…";
-    const fin = () => { btnDonde.disabled = false; btnDonde.textContent = "📍 ¿Dónde estoy?"; };
+    const etiqueta = btnDonde.querySelector("span");
+    btnDonde.disabled = true; etiqueta.textContent = "Buscando…";
+    const fin = () => { btnDonde.disabled = false; etiqueta.textContent = "¿Dónde estoy?"; };
     navigator.geolocation.getCurrentPosition(pos => {
       const ll = [pos.coords.latitude, pos.coords.longitude];
       if (limites.pad(0.2).contains(ll)) {
@@ -206,6 +246,7 @@
   // Lo que se lee en voz alta: la respuesta y, después, lo que el mapa no sabe y la pregunta de vuelta.
   const textoParaLeer = r => [
     textoDe(r),
+    r.destacado ? `El ${r.destacado.cifra} ${r.destacado.texto}.` : "",
     r.datos_faltantes && r.datos_faltantes.length ? `Lo que el mapa no sabe: ${r.datos_faltantes.join(". ")}.` : "",
     r.pregunta_de_vuelta ? `¿Tú sabes? ${r.pregunta_de_vuelta}` : "",
     r.hallazgos && r.hallazgos.length ? `Preparé ${r.hallazgos.length === 1 ? "un borrador de nota" : `${r.hallazgos.length} borradores de nota`} para OpenStreetMap. Revísalos antes de publicar.` : ""
@@ -215,6 +256,11 @@
   function agregarOsm(r, { leer: leerAhora = estado.leerVoz, accionExtra = null } = {}) {
     const b = burbuja("osm", "OSM Sense");
     const p = document.createElement("p"); p.className = "msg-texto"; p.textContent = textoDe(r); b.appendChild(p);
+    if (r.destacado) {
+      const dest = document.createElement("p"); dest.className = "destacado";
+      dest.innerHTML = `<span class="cifra">${esc(r.destacado.cifra)}</span><span>${esc(r.destacado.texto)}</span>`;
+      b.appendChild(dest);
+    }
 
     // Solo se muestran los IDs que existen en los datos; los demás se descartan.
     const validos = (r.ids_citados || []).filter(id => {
@@ -289,14 +335,15 @@
   };
 
   // Bienvenida armada con los datos reales de la zona (no es respuesta de la IA).
+  // Es corta a propósito: una cifra destacada y un botón; el detalle está en "Lo que falta".
   const btnVerFalta = document.createElement("button");
-  btnVerFalta.type = "button"; btnVerFalta.className = "pill"; btnVerFalta.textContent = "🗺️ Ver en el mapa lo que falta";
-  btnVerFalta.addEventListener("click", () => { viasSinDatoVisibles(true); anunciar("Resalté en naranja las vías peatonales sin dato de accesibilidad."); });
+  btnVerFalta.type = "button"; btnVerFalta.className = "pill"; btnVerFalta.textContent = "🧩 Ver lo que falta";
+  btnVerFalta.addEventListener("click", () => { viasSinDatoVisibles(true); $("hoja-mapa").showModal(); });
   agregarOsm({
-    respuesta: `Hola. Soy OSM Sense: te explico la zona de ${resumen.zona} con datos de OpenStreetMap, el mapa libre que hace la comunidad. ` +
-      "Pregúntame lo que quieras, por voz o por escrito. Y si sabes algo que el mapa no sabe, cuéntamelo.",
+    respuesta: "Hola. Te explico este barrio con OpenStreetMap, el mapa libre que hace la comunidad. " +
+      "Pregúntame, o cuéntame lo que el mapa no sabe.",
     respuesta_simple: "Hola. Te explico este barrio con el mapa libre OpenStreetMap. Pregúntame o cuéntame lo que sabes.",
-    datos_faltantes: cifras.map(([n, t]) => `El ${n} % ${t}.`)
+    destacado: { cifra: `${cifras[0][0]} %`, texto: cifras[0][1] }
   }, { leer: false, accionExtra: btnVerFalta });
 
   async function enviar(texto) {
@@ -330,6 +377,7 @@
     estado.ocupado = false; btnEnviar.disabled = false;
   }
   if (MODO_DEMO) agregarSistema("Modo demo: las respuestas están preparadas con datos reales de OpenStreetMap de esta zona.");
+  lista.scrollTop = 0;   // al abrir, la bienvenida se lee desde el principio
 
   // El botón ➤ aparece solo cuando hay algo escrito (Enter también envía); el micrófono queda siempre.
   const autoAlto = () => {
@@ -345,13 +393,16 @@
     ev.preventDefault();
     const texto = entrada.value.trim();
     if (!texto || estado.ocupado) return;
-    entrada.value = ""; entrada.placeholder = "Pregúntale al mapa…"; autoAlto(); entrada.focus();
+    entrada.value = ""; entrada.placeholder = "Pregúntale al mapa…"; autoAlto();
+    // En el celular se cierra el teclado para ver la respuesta; en computador se sigue escribiendo.
+    if (esTactil()) entrada.blur(); else entrada.focus();
+    cajaIdeasLista.querySelectorAll(".elegida").forEach(x => x.classList.remove("elegida"));
     enviar(texto);
   });
 
   // Ideas para preguntar: visibles al empezar; después de la primera pregunta se pliegan en el botón 💡
   // para dejarle más espacio a la conversación.
-  const cajaIdeas = $("caja-ideas"), btnIdeas = $("btn-ideas");
+  const cajaIdeas = $("caja-ideas"), btnIdeas = $("btn-ideas"), cajaIdeasLista = $("ideas");
   const mostrarIdeas = on => { cajaIdeas.hidden = !on; btnIdeas.setAttribute("aria-expanded", String(on)); };
   function plegarIdeas() { if (btnIdeas.hidden) { btnIdeas.hidden = false; mostrarIdeas(false); } }
   btnIdeas.addEventListener("click", () => mostrarIdeas(cajaIdeas.hidden));
@@ -359,7 +410,9 @@
     const b = document.createElement("button");
     b.type = "button"; b.className = "pill"; b.textContent = t;
     b.addEventListener("click", () => {
-      entrada.value = t; autoAlto(); entrada.focus();
+      entrada.value = t; autoAlto(); enfocarEntrada();
+      cajaIdeasLista.querySelectorAll(".elegida").forEach(x => x.classList.remove("elegida")); b.classList.add("elegida");
+      anunciar(`Escribí: ${t}. Toca Enviar.`);
       if (!btnIdeas.hidden) mostrarIdeas(false);
     });
     $("ideas").appendChild(b);
@@ -427,22 +480,39 @@
       }
       copiar(); anunciar("Texto copiado. En OpenStreetMap, pégalo y decide si publicas la nota.");
     });
-    btnUbicar.addEventListener("click", () => {
-      estado.eligiendo = nota;
-      if (esMovil()) expandir(true);
-      agregarSistema(`Toca el mapa en el lugar exacto de la nota ${n}.`);
-    });
+    btnUbicar.addEventListener("click", () => empezarAUbicar(nota));
     bajar();
   }
-  mapa.on("click", ev => {
+
+  // Elegir en el mapa la ubicación de una nota: aviso sobre el mapa con botón Cancelar.
+  const aviso = $("aviso-ubicar");
+  function empezarAUbicar(nota) {
+    estado.eligiendo = nota;
+    $("aviso-ubicar-texto").textContent = `Toca el mapa donde va la nota ${nota.n}.`;
+    aviso.hidden = false; franja.classList.add("eligiendo");
+    if (esMovil()) expandir(true);
+    anunciar(`Toca el mapa donde va la nota ${nota.n}.`);
+    $("btn-cancelar-ubicar").focus({ preventScroll: true });
+  }
+  function terminarDeUbicar(latlng) {
     const nota = estado.eligiendo;
     if (!nota) return;
     estado.eligiendo = null;
-    nota.fijar([ev.latlng.lat, ev.latlng.lng], "punto que elegiste en el mapa");
-    anunciar(`Ubicación de la nota ${nota.n} actualizada.`);
+    aviso.hidden = true; franja.classList.remove("eligiendo");
+    if (latlng) {
+      nota.fijar([latlng.lat, latlng.lng], "punto que elegiste en el mapa");
+      anunciar(`Ubicación de la nota ${nota.n} actualizada.`);
+    } else anunciar("Ubicación sin cambios.");
     if (esMovil()) expandir(false);   // vuelve a mostrar la tarjeta de la nota
-    nota.btnUbicar.focus();
-  });
+    setTimeout(() => nota.btnUbicar.scrollIntoView({ block: "center" }), 300);
+    nota.btnUbicar.focus({ preventScroll: true });
+  }
+  mapa.on("click", ev => terminarDeUbicar(ev.latlng));
+  // Los puntos no pasan el toque al mapa; mientras se ubica una nota, también sirven para elegir.
+  estado.pois.forEach(({ p }) => estado.porId[p.id].marcador.on("click", ev => {
+    if (estado.eligiendo) { mapa.closePopup(); terminarDeUbicar(ev.latlng); }
+  }));
+  $("btn-cancelar-ubicar").addEventListener("click", () => terminarDeUbicar(null));
 
   // ---------- Voz: lectura (speechSynthesis) y dictado (SpeechRecognition) ----------
   function vozEs() {
@@ -475,7 +545,7 @@
       const dicho = Array.from(ev.results).map(x => x[0].transcript).join("");
       entrada.value = `${base} ${dicho}`.trim(); autoAlto();
     };
-    rec.onend = () => { marcar(false); entrada.focus(); };
+    rec.onend = () => { marcar(false); enfocarEntrada(); };
     rec.onerror = ev => {
       if (ev.error === "not-allowed" || ev.error === "service-not-allowed")
         agregarSistema("No tengo permiso para usar el micrófono. Puedes escribir o usar el dictado del teclado.");
