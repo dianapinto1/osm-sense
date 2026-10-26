@@ -60,8 +60,18 @@
   const limites = L.latLngBounds([[s, o], [n, e]]);
   mapa.setView(resumen.punto_central, 16);
 
-  const popup = p => `<strong>${esc(p.nombre || "(sin nombre en OSM)")}</strong><br>${esc(p.tipo)}` +
-    `<br><a href="https://www.openstreetmap.org/${esc(p.id)}" target="_blank" rel="noopener">Ver en OSM (${esc(p.id)})</a>`;
+  // Datos que le faltan a un lugar o a una vía peatonal; son los que la persona puede completar.
+  const esVia = p => p.categoria === "via_peatonal";
+  const faltan = p => esVia(p)
+    ? [!p.tags.wheelchair && "silla de ruedas", !p.tags.surface && "tipo de camino", !p.tags.lit && "iluminación"].filter(Boolean)
+    : [!p.nombre && "nombre", !p.tags.wheelchair && "silla de ruedas"].filter(Boolean);
+  const popup = p => {
+    const f = faltan(p);
+    return `<strong>${esc(p.nombre || (esVia(p) ? "Vía peatonal" : "(sin nombre en el mapa)"))}</strong><br>${esc(p.tipo)}` +
+      (f.length ? `<p class="ficha-falta">Al mapa le falta: ${esc(f.join(", "))}.</p>` +
+        `<button type="button" class="pill ficha-completar" data-completar="${esc(p.id)}">✏️ Completar lo que veo</button>` : "") +
+      `<br><a href="https://www.openstreetmap.org/${esc(p.id)}" target="_blank" rel="noopener">Ver en OSM (${esc(p.id)})</a>`;
+  };
 
   const vias = L.layerGroup().addTo(mapa);
   const viasSinDato = L.layerGroup();
@@ -74,7 +84,7 @@
       // bubblingMouseEvents: false → tocar una vía abre su ficha sin ampliar el mapa a la vez.
       L.polyline(ll, { color: VIA, weight: 3, opacity: .7, bubblingMouseEvents: false }).bindPopup(popup(p)).addTo(vias);
       if (sinDato.has(p.id)) L.polyline(ll, { color: VACIO, weight: 5, dashArray: "6 6", bubblingMouseEvents: false })
-        .bindPopup(popup(p) + "<br><em>Sin dato de accesibilidad</em>").addTo(viasSinDato);
+        .bindPopup(popup(p)).addTo(viasSinDato);
       estado.porId[p.id] = { latlng: ll[Math.floor(ll.length / 2)], p };
       return;
     }
@@ -223,7 +233,20 @@
 
   // ---------- Chat ----------
   const lista = $("mensajes"), entrada = $("entrada"), form = $("form-chat"), btnEnviar = $("btn-enviar");
-  const bajar = () => { lista.scrollTop = lista.scrollHeight; };
+  const bajar = () => { lista.scrollTop = lista.scrollHeight; revisarAbajo(); };
+  // Una respuesta nueva se muestra desde su primera línea (con el final de la pregunta encima),
+  // no desde el final: así se lee de arriba hacia abajo sin tener que buscar el comienzo.
+  function mostrarDesdeElInicio(el) {
+    lista.scrollTop = Math.max(0, el.offsetTop - 56);
+    revisarAbajo();
+  }
+  // Botón "Ver lo más nuevo": visible cuando hay mensajes por debajo de lo que se está leyendo.
+  const btnAbajo = $("btn-abajo");
+  function revisarAbajo() {
+    btnAbajo.hidden = lista.scrollHeight - lista.scrollTop - lista.clientHeight < 80;
+  }
+  lista.addEventListener("scroll", revisarAbajo, { passive: true });
+  btnAbajo.addEventListener("click", bajar);
   function burbuja(clase, remitente) {
     const b = document.createElement("article");
     b.className = `msg ${clase}`;
@@ -276,6 +299,12 @@
         btn.type = "button";
         btn.innerHTML = `<strong>${esc(d.p.nombre || d.p.tipo)}</strong><span>${esc(d.p.nombre ? d.p.tipo : "sin nombre en el mapa")} · a ${metros} m</span>`;
         btn.addEventListener("click", () => irA(id)); li.appendChild(btn); ul.appendChild(li);
+        if (faltan(d.p).length) {
+          const comp = document.createElement("button");
+          comp.type = "button"; comp.className = "completar-chip"; comp.textContent = "✏️";
+          comp.setAttribute("aria-label", `Completar datos de ${nombreDe(d.p)}`); comp.title = "Completar lo que veo";
+          comp.addEventListener("click", () => abrirCompletar(id)); li.appendChild(comp);
+        }
       });
     }
     if (r.datos_faltantes && r.datos_faltantes.length) {
@@ -301,7 +330,7 @@
 
     mensajesOsm.push({ r, p });
     resaltar(validos);
-    bajar();
+    mostrarDesdeElInicio(b);
     if (leerAhora) leer(textoParaLeer(r));
   }
 
@@ -371,13 +400,14 @@
     espera.remove();
     if (r) {
       agregarOsm(r);
-      (r.hallazgos || []).forEach(agregarBorrador);
+      (r.hallazgos || []).forEach(h => agregarBorrador(h));
       estado.historial.push({ role: "assistant", content: [r.respuesta, r.pregunta_de_vuelta].filter(Boolean).join(" ") });
     } else agregarSistema(error.message);
     estado.ocupado = false; btnEnviar.disabled = false;
   }
   if (MODO_DEMO) agregarSistema("Modo demo: las respuestas están preparadas con datos reales de OpenStreetMap de esta zona.");
   lista.scrollTop = 0;   // al abrir, la bienvenida se lee desde el principio
+  revisarAbajo();
 
   // El botón ➤ aparece solo cuando hay algo escrito (Enter también envía); el micrófono queda siempre.
   const autoAlto = () => {
@@ -422,11 +452,13 @@
   const FIRMA = "Reportado por un/a vecino/a mediante OSM Sense (prototipo). Requiere verificación de la comunidad.";
   const TIPOS_HALLAZGO = { nuevo: "Lugar que falta en el mapa", correccion: "Corrección", accesibilidad: "Accesibilidad" };
   const DATO_PERSONAL = /\+?\d[\d\s.-]{6,}\d|[\w.+-]+@[\w-]+(?:\.[\w-]+)+/;
+  // Los enlaces (p. ej. openstreetmap.org/way/252078999) no cuentan: sus números no son teléfonos.
+  const tieneDatoPersonal = t => DATO_PERSONAL.test(t.replace(/https?:\/\/\S+/g, ""));
   const contador = $("contador-hallazgos");
   let totalHallazgos = 0;
   function anunciar(t) { const el = $("anuncio"); el.textContent = ""; setTimeout(() => { el.textContent = t; }, 50); }
 
-  function agregarBorrador(h) {
+  function agregarBorrador(h, { mostrar = false } = {}) {
     const n = ++totalHallazgos;
     contador.hidden = false; contador.querySelector("strong").textContent = n;
     const b = burbuja("borrador");
@@ -446,7 +478,7 @@
     const btnUbicar = b.querySelector("[data-accion=ubicar]");
     area.value = [h.descripcion, h.etiqueta_osm_sugerida ? `Etiqueta sugerida: ${h.etiqueta_osm_sugerida}` : "", FIRMA]
       .filter(Boolean).join("\n\n");
-    const revisar = () => { alerta.hidden = !DATO_PERSONAL.test(area.value); };
+    const revisar = () => { alerta.hidden = !tieneDatoPersonal(area.value); };
     area.addEventListener("input", revisar); revisar();
 
     const nota = { n, btnUbicar, marcador: null };
@@ -474,14 +506,15 @@
       setTimeout(() => { btnCopiar.textContent = "📋 Copiar texto"; }, 2000);
     });
     enlace.addEventListener("click", ev => {
-      if (DATO_PERSONAL.test(area.value) &&
+      if (tieneDatoPersonal(area.value) &&
           !confirm("El texto parece tener un teléfono o un correo, y las notas de OSM son públicas. ¿Abrir de todos modos?")) {
         ev.preventDefault(); return;
       }
       copiar(); anunciar("Texto copiado. En OpenStreetMap, pégalo y decide si publicas la nota.");
     });
     btnUbicar.addEventListener("click", () => empezarAUbicar(nota));
-    bajar();
+    if (mostrar) { mostrarDesdeElInicio(b); if (!esTactil()) area.focus({ preventScroll: true }); } else revisarAbajo();
+    return b;
   }
 
   // Elegir en el mapa la ubicación de una nota: aviso sobre el mapa con botón Cancelar.
@@ -513,6 +546,89 @@
     if (estado.eligiendo) { mapa.closePopup(); terminarDeUbicar(ev.latlng); }
   }));
   $("btn-cancelar-ubicar").addEventListener("click", () => terminarDeUbicar(null));
+
+  // ---------- Completar un lugar: la persona cuenta lo que ve → borrador de nota ----------
+  // Solo se pregunta lo que le falta al lugar. "No sé" queda marcado: nadie está obligado a responder.
+  const PREGUNTAS = {
+    "nombre": { clave: "name", texto: "Nombre", titulo: "¿Cómo se llama?" },
+    "silla de ruedas": {
+      clave: "wheelchair", texto: "Acceso en silla de ruedas",
+      titulo: p => esVia(p) ? "¿Se puede recorrer en silla de ruedas?" : "¿Se puede entrar en silla de ruedas?",
+      opciones: [["yes", "Sí"], ["limited", "Con dificultad"], ["no", "No"]]
+    },
+    "tipo de camino": {
+      clave: "surface", texto: "Tipo de camino", titulo: "¿Cómo es el camino?",
+      opciones: [["paved", "Pavimentado"], ["paving_stones", "Adoquín"], ["unpaved", "Tierra o destapado"]]
+    },
+    "iluminación": { clave: "lit", texto: "Iluminación", titulo: "¿Tiene luz de noche?", opciones: [["yes", "Sí"], ["no", "No"]] }
+  };
+  const dlgCompletar = $("completar"), formCompletar = $("form-completar"), avisoCompletar = $("completar-aviso");
+  let completando = null;
+
+  function abrirCompletar(id) {
+    const d = estado.porId[id];
+    if (!d) return;
+    completando = id;
+    mapa.closePopup();
+    const metros = Math.round(distanciaM(estado.ubicacion, d.latlng));
+    $("completar-lugar").textContent = `${nombreDe(d.p)} · a ${metros} m. Cuéntame solo lo que veas; ` +
+      "si no sabes algo, déjalo en «No sé».";
+    $("completar-preguntas").innerHTML = faltan(d.p).map((f, i) => {
+      const q = PREGUNTAS[f], titulo = typeof q.titulo === "function" ? q.titulo(d.p) : q.titulo;
+      if (!q.opciones) return `<section class="bloque"><h3><label for="q-${i}">${esc(titulo)}</label></h3>
+        <input type="text" id="q-${i}" data-clave="${q.clave}" data-texto="${esc(q.texto)}" autocomplete="off"
+          placeholder="Escribe el nombre que ves en el letrero"></section>`;
+      return `<fieldset class="bloque opciones"><legend>${esc(titulo)}</legend>` +
+        [...q.opciones, ["", "No sé"]].map(([valor, et]) =>
+          `<label class="opcion"><input type="radio" name="q-${i}" value="${valor}" data-clave="${q.clave}"
+             data-texto="${esc(q.texto)}" data-etiqueta="${esc(et)}"${valor ? "" : " checked"}><span>${esc(et)}</span></label>`).join("") +
+        "</fieldset>";
+    }).join("");
+    $("completar-otro").value = ""; avisoCompletar.hidden = true;
+    dlgCompletar.showModal();
+  }
+
+  formCompletar.addEventListener("submit", ev => {
+    ev.preventDefault();
+    const d = estado.porId[completando];
+    const lineas = [], etiquetas = [];
+    formCompletar.querySelectorAll('input[type="text"]').forEach(el => {
+      const t = el.value.trim();
+      if (t) { lineas.push(`${el.dataset.texto}: ${t}`); etiquetas.push(`${el.dataset.clave}=${t}`); }
+    });
+    formCompletar.querySelectorAll('input[type="radio"]:checked').forEach(el => {
+      if (el.value) { lineas.push(`${el.dataset.texto}: ${el.dataset.etiqueta.toLowerCase()}`); etiquetas.push(`${el.dataset.clave}=${el.value}`); }
+    });
+    const otro = $("completar-otro").value.trim();
+    if (otro) lineas.push(`Observación: ${otro}`);
+    const mostrarAviso = t => { avisoCompletar.textContent = t; avisoCompletar.hidden = false; avisoCompletar.scrollIntoView({ block: "nearest" }); };
+    if (!lineas.length) return mostrarAviso("Cuéntame al menos un dato. Si no sabes nada de este lugar, toca «Cerrar».");
+    if (tieneDatoPersonal(lineas.join(" "))) return mostrarAviso("⚠️ Quita el teléfono o el correo: las notas de OSM son públicas.");
+    dlgCompletar.close();
+    if (esMovil()) expandir(false);
+    const b = agregarBorrador({
+      tipo: "correccion",
+      descripcion: `Datos de ${nombreDe(d.p)} (https://www.openstreetmap.org/${completando}), según lo que vio un/a vecino/a:\n- ${lineas.join("\n- ")}`,
+      id_relacionado: completando,
+      etiqueta_osm_sugerida: etiquetas.join(", ") || null
+    }, { mostrar: true });
+    anunciar(`Listo. Creé el ${b.querySelector("h3").textContent.replace("📝 ", "").toLowerCase()}. Revísalo y, si quieres, publícalo en OpenStreetMap.`);
+  });
+  $("btn-cerrar-completar").addEventListener("click", () => dlgCompletar.close());
+  dlgCompletar.addEventListener("click", ev => { if (ev.target === dlgCompletar) dlgCompletar.close(); });
+  // Botón "Completar lo que veo" dentro de las fichas del mapa.
+  mapa.on("popupopen", ev => {
+    const btn = ev.popup.getElement().querySelector("[data-completar]");
+    if (btn) btn.addEventListener("click", () => abrirCompletar(btn.dataset.completar));
+  });
+  $("btn-completar-cercano").addEventListener("click", () => {
+    const sinNombre = estado.pois.filter(({ p }) => !p.nombre)
+      .sort((a, b) => distanciaM(estado.ubicacion, a.latlng) - distanciaM(estado.ubicacion, b.latlng))[0];
+    $("hoja-mapa").close();
+    if (!sinNombre) return agregarSistema("Todos los lugares de esta zona tienen nombre en el mapa.");
+    mapa.flyTo(sinNombre.latlng, 18);
+    abrirCompletar(sinNombre.p.id);
+  });
 
   // ---------- Voz: lectura (speechSynthesis) y dictado (SpeechRecognition) ----------
   function vozEs() {
@@ -561,7 +677,12 @@
   const PREFS = "osm-sense-accesibilidad";
   const ajustes = {
     voz: { boton: "btn-voz", aplicar: on => { estado.leerVoz = on; if (!on) detenerVoz(); } },
-    letra: { boton: "btn-letra", aplicar: on => { document.body.classList.toggle("letra-grande", on); setTimeout(() => mapa.invalidateSize(), 50); } },
+    letra: { boton: "btn-letra", aplicar: on => {
+      document.body.classList.toggle("letra-grande", on);
+      // Con letra grande, también los puntos del mapa son más grandes y fáciles de tocar.
+      estado.pois.forEach(({ p }) => estado.porId[p.id].marcador.setStyle({ radius: on ? 11 : 7, weight: on ? 3 : 2 }));
+      setTimeout(() => mapa.invalidateSize(), 50);
+    } },
     contraste: { boton: "btn-contraste", aplicar: on => document.body.classList.toggle("contraste", on) },
     sencillo: { boton: "btn-pedagogico", aplicar: on => { estado.modoSencillo = on; mensajesOsm.forEach(({ r, p }) => { p.textContent = textoDe(r); }); } }
   };
@@ -595,7 +716,7 @@
   $("btn-probar-voz").addEventListener("click", () => leer($("previa-texto").textContent));
   $("btn-leer-inicio").addEventListener("click", () => leer(
     "¿Cómo prefieres usar OSM Sense? Opción uno: necesito escuchar. Leo en voz alta cada respuesta. " +
-    "Opción dos: tengo baja visión. Letra más grande y alto contraste. Opción tres: prefiero textos sencillos. " +
+    "Opción dos: tengo baja visión. Letra y puntos del mapa más grandes, en blanco y negro con mucho contraste. Opción tres: prefiero textos sencillos. " +
     "Al final está el botón Empezar."));
 
   const inicio = $("inicio");

@@ -8,7 +8,7 @@
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-26a">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26c">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -50,6 +50,8 @@
     <h2 class="solo-lectores">Conversación</h2>
     <p id="contador-hallazgos" class="contador" hidden>📝 Hallazgos de esta conversación: <strong>0</strong></p>
     <div id="mensajes" class="mensajes" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <!-- Aparece cuando hay mensajes más abajo de lo que se está leyendo. -->
+    <button type="button" class="pill ir-abajo" id="btn-abajo" hidden>⬇ Ver lo más nuevo</button>
   </main>
 
   <footer class="entrada">
@@ -79,7 +81,7 @@
       </button>
       <button type="button" class="perfil" data-perfil="ver" aria-pressed="false">
         <span class="perfil-icono" aria-hidden="true">👁️</span>
-        <span><strong>Tengo baja visión</strong><span>Letra más grande y colores de alto contraste.</span></span>
+        <span><strong>Tengo baja visión</strong><span>Letra y puntos del mapa más grandes, en blanco y negro con mucho contraste.</span></span>
       </button>
       <button type="button" class="perfil" data-perfil="sencillo" aria-pressed="false">
         <span class="perfil-icono" aria-hidden="true">💬</span>
@@ -121,7 +123,8 @@
     <section aria-label="Cifras de vacíos de información" class="bloque vacios">
       <div id="vacios-datos" class="cifras"></div>
       <label class="check"><input type="checkbox" id="chk-vacios"> Resaltar en el mapa las vías peatonales sin dato de accesibilidad</label>
-      <a id="btn-nota" class="boton-principal" target="_blank" rel="noopener">📝 Abrir nota en OpenStreetMap</a>
+      <button type="button" class="boton-principal" id="btn-completar-cercano">✏️ Completar el lugar sin nombre más cercano</button>
+      <a id="btn-nota" class="pill enlace-pill" target="_blank" rel="noopener">📝 Abrir una nota en blanco en OpenStreetMap</a>
     </section>
 
     <section aria-labelledby="t-capas" class="bloque">
@@ -133,7 +136,27 @@
       OSM Sense es un prototipo: no edita OpenStreetMap y puede equivocarse.</p>
   </dialog>
 
+  <!-- Completar un lugar: la persona cuenta lo que ve y se arma un borrador de nota (nunca se publica solo). -->
+  <dialog id="completar" class="hoja" aria-labelledby="t-completar">
+    <div class="hoja-cabeza">
+      <h2 id="t-completar">Completar este lugar</h2>
+      <button type="button" class="pill" id="btn-cerrar-completar">Cerrar</button>
+    </div>
+    <p class="inicio-intro" id="completar-lugar"></p>
+    <form id="form-completar">
+      <div id="completar-preguntas"></div>
+      <section class="bloque">
+        <h3><label for="completar-otro">¿Algo más que veas? <span class="nota">(opcional)</span></label></h3>
+        <textarea id="completar-otro" rows="2" placeholder="Por ejemplo: la entrada tiene un escalón alto"></textarea>
+      </section>
+      <p class="alerta" id="completar-aviso" hidden></p>
+      <div class="hoja-pie">
+        <button type="submit" class="boton-principal empezar">📝 Crear borrador de nota</button>
+      </div>
+    </form>
+  </dialog>
+
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-26a"></script>
+  <script src="app.js?v=2026-10-26c"></script>
 </body>
 </html>
