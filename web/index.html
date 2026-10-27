@@ -8,7 +8,7 @@
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-26e">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26f">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -35,6 +35,12 @@
       <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
     </div>
   </header>
+
+  <!-- Solo cuando el mapa está oculto: explica por qué y permite volver a verlo. -->
+  <div class="aviso-sinmapa" id="aviso-sinmapa" hidden>
+    <span>El mapa está oculto: ves los lugares en lista.</span>
+    <button type="button" class="pill" id="btn-mostrar-mapa">🗺️ Mostrar el mapa</button>
+  </div>
 
   <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
     <p class="solo-lectores">Mapa visual. Si usas lector de pantalla o ves poco, usa el botón «Lista de lugares»: tiene la misma información en texto.</p>
@@ -117,7 +123,7 @@
         <button type="button" class="interruptor" id="btn-letra" aria-pressed="false">Letra grande</button>
         <button type="button" class="interruptor" id="btn-contraste" aria-pressed="false">Alto contraste</button>
         <button type="button" class="interruptor" id="btn-pedagogico" aria-pressed="false">Modo sencillo</button>
-        <button type="button" class="interruptor" id="btn-sinmapa" aria-pressed="false">Lugares en lista (sin mapa)</button>
+        <button type="button" class="interruptor" id="btn-sinmapa" aria-pressed="false">Ocultar el mapa (usar la lista)</button>
       </div>
     </section>
 
@@ -185,6 +191,6 @@
   </dialog>
 
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-26e"></script>
+  <script src="app.js?v=2026-10-26f"></script>
 </body>
 </html>

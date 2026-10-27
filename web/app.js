@@ -696,6 +696,7 @@
     sinmapa: { boton: "btn-sinmapa", aplicar: on => {
       document.body.classList.toggle("sin-mapa", on);
       $("btn-lista-barra").hidden = !on;
+      $("aviso-sinmapa").hidden = !on;
       setTimeout(() => mapa.invalidateSize(), 50);
     } }
   };
@@ -808,6 +809,11 @@
     if (estado.leerVoz) leer(`Lista de lugares. ${$("lista-intro").textContent} El más cercano: ${olLista.querySelector("h3").textContent}.`);
   }
   $("btn-lista").addEventListener("click", abrirLista);
+  $("btn-mostrar-mapa").addEventListener("click", () => {
+    poner("sinmapa", false); refrescarInicio();
+    anunciar("Listo, el mapa está visible.");
+    $("btn-donde").focus({ preventScroll: true });
+  });
   $("btn-lista-barra").addEventListener("click", abrirLista);
   $("btn-cerrar-lista").addEventListener("click", () => dlgLista.close());
   dlgLista.addEventListener("click", ev => { if (ev.target === dlgLista) dlgLista.close(); });
