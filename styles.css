@@ -495,16 +495,9 @@ body.letra-grande .leaflet-popup-content .ficha-completar { font-size: 17px; }
 /* ---------- Lugares en lista (sin mapa) ---------- */
 .barra-acciones { display: flex; gap: 8px; flex: none; }
 body.sin-mapa .franja-mapa { display: none !important; }
-.aviso-sinmapa {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px;
-  padding: 10px 16px; background: var(--resalte-fondo); color: var(--titulo); font-size: .85em; font-weight: 600;
-  box-shadow: inset 0 -1px 0 var(--linea);
-}
-body.contraste .aviso-sinmapa { border-bottom: 2px solid #000; }
-.aviso-sinmapa .pill { background: var(--principal); color: var(--principal-texto); }
-body.sin-mapa { grid-template-rows: auto auto minmax(0, 1fr) auto !important; }
+body.sin-mapa { grid-template-rows: auto minmax(0, 1fr) auto !important; }
 body.sin-mapa { grid-template-columns: minmax(0, 1fr) !important; }
-body.sin-mapa .barra, body.sin-mapa .aviso-sinmapa { grid-column: 1 !important; }
+body.sin-mapa .barra { grid-column: 1 !important; }
 body.sin-mapa .chat, body.sin-mapa .entrada { grid-column: 1 !important; grid-row: auto !important; }
 body.sin-mapa .mensajes, body.sin-mapa .form-chat, body.sin-mapa .ideas { max-width: 900px; }
 
@@ -632,3 +625,52 @@ body.contraste .leaflet-control-attribution a, body.contraste .leaflet-popup-con
 .interruptores { align-items: stretch; }
 .interruptor { min-height: 56px; }
 .hoja > .hoja-pie, .hoja form > .hoja-pie { max-width: none; margin-left: -16px; margin-right: -16px; }
+
+
+/* =====================================================================================
+   Modo "No veo o casi no veo" (mapa oculto). Inspirado en Soundscape y BlindSquare:
+   pocos botones muy grandes que responden hablando. Tema oscuro suave: alivia a quien tiene
+   sensibilidad a la luz y evita el negro y el blanco puros (menos destello con astigmatismo).
+   ===================================================================================== */
+body.sin-mapa, body.sin-mapa.contraste {
+  --fondo: #141414;
+  --superficie: #1f1f1f;
+  --superficie-suave: #2a2a2a;
+  --linea: #e6e6e6;
+  --titulo: #f5f5f5;
+  --texto: #f0f0f0;
+  --cuerpo: #e8e8e8;
+  --suave: #d0d0d0;
+  --enlace: #ffd84d;
+  --acento: #ffd84d;
+  --principal: #ffd84d;
+  --principal-texto: #141414;
+  --resalte-fondo: #2d2812;
+  --foco: #66d9ff;
+}
+body.sin-mapa *, body.sin-mapa *::after { border-color: var(--linea) !important; }
+body.sin-mapa .barra { box-shadow: inset 0 -2px 0 var(--linea); }
+body.sin-mapa .msg.osm, body.sin-mapa .msg.borrador { box-shadow: none; border: 2px solid var(--linea); }
+body.sin-mapa .ficha-falta, body.sin-mapa .alerta { color: var(--acento); background: transparent; }
+body.sin-mapa .alerta { border: 2px solid var(--acento); }
+body.sin-mapa .interruptor::after { background: var(--superficie); color: var(--texto); }
+body.sin-mapa .interruptor[aria-pressed="true"]::after { background: var(--principal); color: var(--principal-texto); }
+body.sin-mapa .marca h1 { font-size: 1.2em; }
+body.sin-mapa .logo { display: none; }
+body.sin-mapa .ideas-titulo { display: none; }
+
+.botonera { width: 100%; max-width: var(--columna); margin: 0 auto; padding: var(--esp) var(--esp) 0; }
+.botonera-grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.baldosa {
+  min-height: 100px; padding: 12px 10px; border-radius: 18px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center;
+  font-size: .95em; font-weight: 700; line-height: 1.2; color: var(--titulo);
+  background: var(--superficie); border: 3px solid var(--linea);
+}
+.baldosa:active, .baldosa:hover { background: var(--resalte-fondo); }
+.baldosa-icono { font-size: 1.9rem; line-height: 1; }
+.botonera-mapa { width: 100%; margin-top: 12px; font-size: .78em; }
+body.teclado .botonera { display: none !important; }
+@media (max-height: 640px) { .baldosa { min-height: 88px; } .baldosa-icono { font-size: 1.6rem; } }
+
+.cargando { margin: 0; padding: 24px var(--esp); text-align: center; font-weight: 600; color: var(--suave); }

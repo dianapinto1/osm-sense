@@ -161,11 +161,12 @@
     mapa.flyTo(resumen.punto_central, 17);
     agregarSistema(`${motivo} Uso el punto de referencia de la zona piloto (modo demo).`);
   }
-  btnDonde.addEventListener("click", () => {
-    if (!navigator.geolocation) return usarDemo("Este navegador no permite conocer tu ubicación.");
+  // despues(): se llama al terminar, con GPS o con el punto de referencia.
+  function ubicar(despues = () => {}) {
+    if (!navigator.geolocation) { usarDemo("Este navegador no permite conocer tu ubicación."); return despues(); }
     const etiqueta = btnDonde.querySelector("span");
     btnDonde.disabled = true; etiqueta.textContent = "Buscando…";
-    const fin = () => { btnDonde.disabled = false; etiqueta.textContent = "¿Dónde estoy?"; };
+    const fin = () => { btnDonde.disabled = false; etiqueta.textContent = "¿Dónde estoy?"; despues(); };
     navigator.geolocation.getCurrentPosition(pos => {
       const ll = [pos.coords.latitude, pos.coords.longitude];
       if (limites.pad(0.2).contains(ll)) {
@@ -175,7 +176,8 @@
       fin();
     }, () => { usarDemo("No pude conocer tu ubicación."); fin(); },
     { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 });
-  });
+  }
+  btnDonde.addEventListener("click", () => ubicar());
 
   // Lo que se le entrega a la IA: los lugares más cercanos y, además, los más cercanos de cada
   // categoría (así sabe dónde queda la salud más cercana aunque esté lejos).
@@ -697,8 +699,8 @@
     // Sin mapa: la lista de lugares reemplaza al mapa (lector de pantalla o muy baja visión).
     sinmapa: { boton: "btn-sinmapa", aplicar: on => {
       document.body.classList.toggle("sin-mapa", on);
-      $("btn-lista-barra").hidden = !on;
-      $("aviso-sinmapa").hidden = !on;
+      $("botonera").hidden = !on;
+      if (on) { btnIdeas.hidden = false; mostrarIdeas(false); }   // más espacio para la conversación
       setTimeout(() => mapa.invalidateSize(), 50);
     } }
   };
@@ -816,7 +818,6 @@
     anunciar("Listo, el mapa está visible.");
     $("btn-donde").focus({ preventScroll: true });
   });
-  $("btn-lista-barra").addEventListener("click", abrirLista);
   $("btn-cerrar-lista").addEventListener("click", () => dlgLista.close());
   dlgLista.addEventListener("click", ev => { if (ev.target === dlgLista) dlgLista.close(); });
   selCat.addEventListener("change", () => { mostrados = PASO_LISTA; const n = pintarLista(); anunciar(`${n} lugares.`); });
@@ -855,4 +856,55 @@
       `#map=${z}/${c.lat.toFixed(6)}/${c.lng.toFixed(6)}`;
   };
   mapa.on("moveend", actualizarNota); actualizarNota();
+
+
+  // ---------- Modo "No veo o casi no veo": botones grandes que responden hablando ----------
+  // Inspirado en Soundscape ("Mi ubicación", "A mi alrededor") y BlindSquare (distancia y dirección).
+  const cercanos = () => estado.pois.map(x => ({ ...x, m: distanciaM(estado.ubicacion, x.latlng) })).sort((a, b) => a.m - b.m);
+  $("b-donde").addEventListener("click", () => ubicar(() => {
+    const ref = cercanos().find(x => x.p.nombre) || cercanos()[0];
+    const d = estado.porId[ref.p.id];
+    agregarOsm({
+      respuesta: `${estado.origenUbicacion === "gps" ? "Estás" : "Estoy usando el punto de referencia,"} cerca de ${nombreDe(ref.p)}: queda ${dondeQueda(d)}. ` +
+        "Toca «¿Qué hay cerca?» para saber qué hay a tu alrededor.",
+      ids_citados: [ref.p.id]
+    });
+  }));
+  $("b-cerca").addEventListener("click", () => {
+    // Un lugar por cada dirección (norte, este, sur, oeste), primero los que tienen nombre.
+    const todos = cercanos().filter(x => x.m <= 600);
+    // Cuatro sectores de 90°: norte (315°-45°), este, sur y oeste.
+    const sector = x => {
+      const rad = v => v * Math.PI / 180, a = estado.ubicacion, b = x.latlng, dLon = rad(b[1] - a[1]);
+      const g = (Math.atan2(Math.sin(dLon) * Math.cos(rad(b[0])),
+        Math.cos(rad(a[0])) * Math.sin(rad(b[0])) - Math.sin(rad(a[0])) * Math.cos(rad(b[0])) * Math.cos(dLon)) * 180 / Math.PI + 360) % 360;
+      return ["al norte", "al este", "al sur", "al oeste"][Math.round(g / 90) % 4];
+    };
+    const elegidos = ["al norte", "al este", "al sur", "al oeste"].map(dir => {
+      const enDir = todos.filter(x => x.m > 15 && sector(x) === dir);
+      return enDir.find(x => x.p.nombre) || enDir[0];
+    }).filter(Boolean);
+    const frases = elegidos.map(x => `${sector(x).replace("al ", "Al ")}, a ${Math.round(x.m)} metros: ${nombreDe(x.p)}.`);
+    agregarOsm({
+      respuesta: frases.length ? `A tu alrededor: ${frases.join(" ")}` : "No encontré lugares a menos de 600 metros.",
+      ids_citados: elegidos.map(x => x.p.id),
+      datos_faltantes: elegidos.some(x => !x.p.nombre) ? ["Algunos de estos lugares no tienen nombre en el mapa."] : []
+    });
+  });
+  const btnCompletarCercano = () => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "pill"; b.textContent = "✏️ Completar el lugar sin nombre más cercano";
+    b.addEventListener("click", () => $("btn-completar-cercano").click());
+    return b;
+  };
+  $("b-falta").addEventListener("click", () => agregarOsm({
+    respuesta: "Esto es lo que el mapa no sabe de este barrio. Puedes ayudar a completarlo.",
+    datos_faltantes: cifras.map(([n, t]) => `El ${n} % ${t}.`)
+  }, { accionExtra: btnCompletarCercano() }));
+  $("b-lista").addEventListener("click", abrirLista);
+
+  // Listo: se quita el aviso de carga. Si algo falla de aquí en adelante, se avisa en la conversación.
+  $("cargando").remove();
+  addEventListener("error", ev => agregarSistema(`Algo falló (${ev.message}). Recarga la página; si sigue pasando, envía una captura de este mensaje.`));
+  addEventListener("unhandledrejection", ev => agregarSistema(`Algo falló (${ev.reason && ev.reason.message || ev.reason}). Recarga la página.`));
 })();
