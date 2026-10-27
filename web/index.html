@@ -8,7 +8,7 @@
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-26g">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26h">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -30,17 +30,10 @@
       </div>
     </div>
     <div class="barra-acciones">
-      <!-- Visible solo cuando el mapa está oculto ("Lugares en lista"): la lista reemplaza al mapa. -->
-      <button type="button" class="pill" id="btn-lista-barra" aria-haspopup="dialog" hidden>📋 Lugares</button>
       <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
     </div>
   </header>
 
-  <!-- Solo cuando el mapa está oculto: explica por qué y permite volver a verlo. -->
-  <div class="aviso-sinmapa" id="aviso-sinmapa" hidden>
-    <span>El mapa está oculto: ves los lugares en lista.</span>
-    <button type="button" class="pill" id="btn-mostrar-mapa">🗺️ Mostrar el mapa</button>
-  </div>
 
   <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
     <p class="solo-lectores">Mapa visual. Si usas lector de pantalla o ves poco, usa el botón «Lista de lugares»: tiene la misma información en texto.</p>
@@ -63,6 +56,17 @@
   <main class="chat">
     <h2 class="solo-lectores">Conversación</h2>
     <p id="contador-hallazgos" class="contador" hidden>📝 Hallazgos de esta conversación: <strong>0</strong></p>
+    <!-- Panel de botones grandes del modo "No veo o casi no veo" (inspirado en Soundscape y BlindSquare). -->
+    <section id="botonera" class="botonera" aria-label="Acciones principales" hidden>
+      <div class="botonera-grilla">
+        <button type="button" class="baldosa" id="b-donde"><span class="baldosa-icono" aria-hidden="true">📍</span><span>¿Dónde estoy?</span></button>
+        <button type="button" class="baldosa" id="b-cerca"><span class="baldosa-icono" aria-hidden="true">🧭</span><span>¿Qué hay cerca?</span></button>
+        <button type="button" class="baldosa" id="b-falta"><span class="baldosa-icono" aria-hidden="true">❓</span><span>Lo que falta</span></button>
+        <button type="button" class="baldosa" id="b-lista"><span class="baldosa-icono" aria-hidden="true">📋</span><span>Todos los lugares</span></button>
+      </div>
+      <button type="button" class="pill botonera-mapa" id="btn-mostrar-mapa">🗺️ Volver a ver el mapa</button>
+    </section>
+    <p id="cargando" class="cargando" role="status">Cargando el mapa del barrio…</p>
     <div id="mensajes" class="mensajes" role="log" aria-live="polite" aria-relevant="additions"></div>
     <!-- Aparece cuando hay mensajes más abajo de lo que se está leyendo. -->
     <button type="button" class="pill ir-abajo" id="btn-abajo" hidden>⬇ Ver lo más nuevo</button>
@@ -191,6 +195,6 @@
   </dialog>
 
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-26g"></script>
+  <script src="app.js?v=2026-10-26h"></script>
 </body>
 </html>
