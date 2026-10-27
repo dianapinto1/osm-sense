@@ -8,7 +8,7 @@
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-26h">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26i">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -30,6 +30,8 @@
       </div>
     </div>
     <div class="barra-acciones">
+      <!-- Logo del evento: solo en pantallas anchas (en el celular está en el inicio y en la bienvenida). -->
+      <img class="logo-sotm" src="img/sotm-latam-2026-96.png" width="48" height="48" alt="State of the Map Latinoamérica, Ciudad de México 2026">
       <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
     </div>
   </header>
@@ -88,6 +90,7 @@
 
   <!-- Inicio: cómo prefiere la persona usar el sitio. Se abre al entrar y con el botón "Accesibilidad". -->
   <dialog id="inicio" class="hoja inicio" aria-labelledby="t-inicio">
+    <img class="inicio-logo" src="img/sotm-latam-2026-256.png" width="96" height="96" alt="State of the Map Latinoamérica, Ciudad de México 2026">
     <h2 id="t-inicio">¿Cómo prefieres usar OSM Sense?</h2>
     <p class="inicio-intro">Elige lo que te sirva. Puedes cambiarlo cuando quieras con el botón «♿ Accesibilidad».</p>
     <button type="button" class="pill" id="btn-leer-inicio">🔊 Escuchar estas opciones</button>
@@ -195,6 +198,6 @@
   </dialog>
 
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-26h"></script>
+  <script src="app.js?v=2026-10-26i"></script>
 </body>
 </html>

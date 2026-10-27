@@ -674,3 +674,14 @@ body.teclado .botonera { display: none !important; }
 @media (max-height: 640px) { .baldosa { min-height: 88px; } .baldosa-icono { font-size: 1.6rem; } }
 
 .cargando { margin: 0; padding: 24px var(--esp); text-align: center; font-weight: 600; color: var(--suave); }
+
+/* ---------- Logo de State of the Map Latam 2026 ---------- */
+.logo-sotm { display: none; width: 48px; height: 48px; flex: none; }
+@media (min-width: 900px) { .logo-sotm { display: block; } .barra-acciones { align-items: center; gap: 14px; } }
+.inicio-logo { display: block; width: 96px; height: 96px; margin: 4px auto 8px !important; }
+.sello {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 14px !important; padding-bottom: 12px;
+  border-bottom: 1px solid var(--linea); font-size: .78em; line-height: 1.35; color: var(--cuerpo);
+}
+.sello img { flex: none; width: 44px; height: 44px; }
+body.letra-grande .inicio-logo { width: 72px; height: 72px; }

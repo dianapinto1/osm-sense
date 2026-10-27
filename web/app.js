@@ -382,6 +382,10 @@
     respuesta_simple: "Hola. Te explico este barrio con el mapa libre OpenStreetMap. Pregúntame o cuéntame lo que sabes.",
     destacado: { cifra: `${cifras[0][0]} %`, texto: cifras[0][1] }
   }, { leer: false, accionExtra: btnVerFalta });
+  // Sello del evento en la bienvenida.
+  lista.querySelector(".msg.osm").insertAdjacentHTML("afterbegin",
+    '<p class="sello"><img src="img/sotm-latam-2026-96.png" width="44" height="44" alt=""><span>Prototipo presentado en ' +
+    '<strong>State of the Map Latam</strong> · CDMX 2026</span></p>');
 
   async function enviar(texto) {
     if (!texto || estado.ocupado) return;
