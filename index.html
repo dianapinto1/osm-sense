@@ -8,7 +8,7 @@
   <title>OSM Sense</title>
   <link rel="stylesheet" href="lib/leaflet.css">
   <!-- ?v=… obliga al navegador a descargar la versión nueva después de cada publicación -->
-  <link rel="stylesheet" href="styles.css?v=2026-10-26c">
+  <link rel="stylesheet" href="styles.css?v=2026-10-26e">
 </head>
 <body>
   <a class="saltar" href="#entrada">Ir a escribir una pregunta</a>
@@ -29,14 +29,22 @@
         <p class="sub" id="nombre-zona">Cargando zona…</p>
       </div>
     </div>
-    <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
+    <div class="barra-acciones">
+      <!-- Visible solo cuando el mapa está oculto ("Lugares en lista"): la lista reemplaza al mapa. -->
+      <button type="button" class="pill" id="btn-lista-barra" aria-haspopup="dialog" hidden>📋 Lugares</button>
+      <button type="button" class="pill acceso" id="btn-accesibilidad" aria-haspopup="dialog">♿ Accesibilidad</button>
+    </div>
   </header>
 
   <section class="franja-mapa" id="franja-mapa" aria-label="Mapa de la zona">
+    <p class="solo-lectores">Mapa visual. Si usas lector de pantalla o ves poco, usa el botón «Lista de lugares»: tiene la misma información en texto.</p>
     <div id="mapa" class="mapa"></div>
     <div class="mapa-controles" role="toolbar" aria-label="Herramientas del mapa">
-      <button type="button" class="pill flotante" id="btn-donde">📍 <span>¿Dónde estoy?</span></button>
-      <button type="button" class="pill flotante" id="btn-mapa" aria-haspopup="dialog">🧩 <span>Lo que falta</span></button>
+      <button type="button" class="pill flotante" id="btn-donde" aria-label="¿Dónde estoy?">📍 <span aria-hidden="true">¿Dónde estoy?</span></button>
+      <button type="button" class="pill flotante" id="btn-lista" aria-haspopup="dialog" aria-label="Lista de lugares">📋 <span aria-hidden="true">Lista</span></button>
+      <button type="button" class="pill flotante" id="btn-mapa" aria-haspopup="dialog" aria-label="Lo que le falta al mapa">🧩 <span aria-hidden="true">Lo que falta</span></button>
+    </div>
+    <div class="mapa-expandir">
       <button type="button" class="pill flotante icono" id="btn-expandir" aria-expanded="false" aria-controls="franja-mapa" aria-label="Ampliar mapa" title="Ampliar mapa">⤢</button>
     </div>
     <!-- Se muestra solo mientras la persona elige en el mapa la ubicación de una nota. -->
@@ -83,6 +91,10 @@
         <span class="perfil-icono" aria-hidden="true">👁️</span>
         <span><strong>Tengo baja visión</strong><span>Letra y puntos del mapa más grandes, en blanco y negro con mucho contraste.</span></span>
       </button>
+      <button type="button" class="perfil" data-perfil="ciego" aria-pressed="false">
+        <span class="perfil-icono" aria-hidden="true">🦯</span>
+        <span><strong>No veo o casi no veo</strong><span>Leo todo en voz alta, letra muy grande y los lugares en una lista en vez del mapa. Sirve con lector de pantalla.</span></span>
+      </button>
       <button type="button" class="perfil" data-perfil="sencillo" aria-pressed="false">
         <span class="perfil-icono" aria-hidden="true">💬</span>
         <span><strong>Prefiero textos sencillos</strong><span>Respuestas cortas y con palabras fáciles.</span></span>
@@ -105,6 +117,7 @@
         <button type="button" class="interruptor" id="btn-letra" aria-pressed="false">Letra grande</button>
         <button type="button" class="interruptor" id="btn-contraste" aria-pressed="false">Alto contraste</button>
         <button type="button" class="interruptor" id="btn-pedagogico" aria-pressed="false">Modo sencillo</button>
+        <button type="button" class="interruptor" id="btn-sinmapa" aria-pressed="false">Lugares en lista (sin mapa)</button>
       </div>
     </section>
 
@@ -136,6 +149,21 @@
       OSM Sense es un prototipo: no edita OpenStreetMap y puede equivocarse.</p>
   </dialog>
 
+  <!-- Lista de lugares: alternativa en texto al mapa (lector de pantalla, baja visión, ampliación). -->
+  <dialog id="lista" class="hoja" aria-labelledby="t-lista">
+    <div class="hoja-cabeza">
+      <h2 id="t-lista">Lugares cerca de ti</h2>
+      <button type="button" class="pill" id="btn-cerrar-lista">Cerrar</button>
+    </div>
+    <p class="inicio-intro" id="lista-intro"></p>
+    <div class="lista-filtro">
+      <label for="lista-cat">Mostrar</label>
+      <select id="lista-cat"></select>
+    </div>
+    <ol id="lista-lugares" class="lista-lugares"></ol>
+    <button type="button" class="pill lista-mas" id="btn-lista-mas">Mostrar más lugares</button>
+  </dialog>
+
   <!-- Completar un lugar: la persona cuenta lo que ve y se arma un borrador de nota (nunca se publica solo). -->
   <dialog id="completar" class="hoja" aria-labelledby="t-completar">
     <div class="hoja-cabeza">
@@ -157,6 +185,6 @@
   </dialog>
 
   <script src="lib/leaflet.js"></script>
-  <script src="app.js?v=2026-10-26c"></script>
+  <script src="app.js?v=2026-10-26e"></script>
 </body>
 </html>

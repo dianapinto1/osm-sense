@@ -253,7 +253,8 @@
     if (remitente) b.innerHTML = `<p class="remitente">${remitente}</p>`;
     lista.appendChild(b); return b;
   }
-  function agregarSistema(texto) { burbuja("sistema").textContent = texto; bajar(); }
+  // Los avisos también se leen en voz alta cuando está activo "Leer en voz alta".
+  function agregarSistema(texto) { burbuja("sistema").textContent = texto; bajar(); if (estado.leerVoz) leer(texto); }
   function agregarPersona(texto) {
     const b = burbuja("persona", "Tú");
     const p = document.createElement("p"); p.textContent = texto; b.appendChild(p); bajar();
@@ -343,6 +344,11 @@
   }
   function irA(id) {
     const d = estado.porId[id];
+    // Sin mapa: se dice dónde queda el lugar en vez de mostrarlo.
+    if (document.body.classList.contains("sin-mapa")) {
+      const t = `${nombreDe(d.p)}. Queda ${dondeQueda(d)}.` + (faltan(d.p).length ? ` Al mapa le falta: ${faltan(d.p).join(", ")}.` : "");
+      anunciar(t); leer(t); return;
+    }
     mapa.flyTo(d.latlng, 18);
     if (d.marcador) d.marcador.openPopup(); else mapa.openPopup(popup(d.p), d.latlng);
   }
@@ -436,6 +442,7 @@
   const mostrarIdeas = on => { cajaIdeas.hidden = !on; btnIdeas.setAttribute("aria-expanded", String(on)); };
   function plegarIdeas() { if (btnIdeas.hidden) { btnIdeas.hidden = false; mostrarIdeas(false); } }
   btnIdeas.addEventListener("click", () => mostrarIdeas(cajaIdeas.hidden));
+  if (matchMedia("(max-height: 520px)").matches) { btnIdeas.hidden = false; mostrarIdeas(false); }
   (MODO_DEMO ? (guion.turnos || []).map(t => t.pregunta) : IDEAS).forEach(t => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "pill"; b.textContent = t;
@@ -684,9 +691,15 @@
       setTimeout(() => mapa.invalidateSize(), 50);
     } },
     contraste: { boton: "btn-contraste", aplicar: on => document.body.classList.toggle("contraste", on) },
-    sencillo: { boton: "btn-pedagogico", aplicar: on => { estado.modoSencillo = on; mensajesOsm.forEach(({ r, p }) => { p.textContent = textoDe(r); }); } }
+    sencillo: { boton: "btn-pedagogico", aplicar: on => { estado.modoSencillo = on; mensajesOsm.forEach(({ r, p }) => { p.textContent = textoDe(r); }); } },
+    // Sin mapa: la lista de lugares reemplaza al mapa (lector de pantalla o muy baja visión).
+    sinmapa: { boton: "btn-sinmapa", aplicar: on => {
+      document.body.classList.toggle("sin-mapa", on);
+      $("btn-lista-barra").hidden = !on;
+      setTimeout(() => mapa.invalidateSize(), 50);
+    } }
   };
-  const PERFILES = { escuchar: ["voz"], ver: ["letra", "contraste"], sencillo: ["sencillo"] };
+  const PERFILES = { escuchar: ["voz"], ver: ["letra", "contraste"], ciego: ["voz", "letra", "contraste", "sinmapa"], sencillo: ["sencillo"] };
   const activo = k => $(ajustes[k].boton).getAttribute("aria-pressed") === "true";
   const PREVIA = {
     normal: "A 55 m está el Parque Metropolitano El Tintal. El mapa no dice si sus caminos se pueden recorrer en silla de ruedas.",
@@ -711,12 +724,16 @@
     const on = b.getAttribute("aria-pressed") !== "true";
     PERFILES[b.dataset.perfil].forEach(k => poner(k, on));
     if (on && b.dataset.perfil === "escuchar") leer("Listo. Leeré en voz alta cada respuesta. También puedes hablarme con el botón del micrófono.");
+    if (on && b.dataset.perfil === "ciego") leer("Listo. Leeré todo en voz alta y verás los lugares en una lista, con su distancia y dirección. " +
+      "Arriba está el botón Lugares. Abajo puedes escribir o hablar con el micrófono. Toca Empezar para continuar.");
     refrescarInicio();
   }));
   $("btn-probar-voz").addEventListener("click", () => leer($("previa-texto").textContent));
   $("btn-leer-inicio").addEventListener("click", () => leer(
     "¿Cómo prefieres usar OSM Sense? Opción uno: necesito escuchar. Leo en voz alta cada respuesta. " +
-    "Opción dos: tengo baja visión. Letra y puntos del mapa más grandes, en blanco y negro con mucho contraste. Opción tres: prefiero textos sencillos. " +
+    "Opción dos: tengo baja visión. Letra y puntos del mapa más grandes, en blanco y negro con mucho contraste. " +
+    "Opción tres: no veo o casi no veo. Leo todo en voz alta y los lugares aparecen en una lista en vez del mapa. " +
+    "Opción cuatro: prefiero textos sencillos. " +
     "Al final está el botón Empezar."));
 
   const inicio = $("inicio");
@@ -736,6 +753,69 @@
   $("btn-mapa").addEventListener("click", () => hojaMapa.showModal());
   $("btn-cerrar-mapa").addEventListener("click", () => hojaMapa.close());
   [inicio, hojaMapa].forEach(d => d.addEventListener("click", ev => { if (ev.target === d) d.close(); }));
+
+  // ---------- Lista de lugares: el mapa en texto, con distancia y dirección ----------
+  const RUMBOS = ["al norte", "al noreste", "al este", "al sureste", "al sur", "al suroeste", "al oeste", "al noroeste"];
+  function rumbo(a, b) {
+    const rad = x => x * Math.PI / 180, dLon = rad(b[1] - a[1]);
+    const y = Math.sin(dLon) * Math.cos(rad(b[0]));
+    const x = Math.cos(rad(a[0])) * Math.sin(rad(b[0])) - Math.sin(rad(a[0])) * Math.cos(rad(b[0])) * Math.cos(dLon);
+    const g = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+    return RUMBOS[Math.round(g / 45) % 8];
+  }
+  const dondeQueda = d => {
+    const m = Math.round(distanciaM(estado.ubicacion, d.latlng));
+    return m < 15 ? "aquí mismo" : `a ${m} metros ${rumbo(estado.ubicacion, d.latlng)}`;
+  };
+  const dlgLista = $("lista"), olLista = $("lista-lugares"), selCat = $("lista-cat");
+  const PASO_LISTA = 15;
+  let mostrados = PASO_LISTA;
+  selCat.innerHTML = `<option value="">Todos los lugares (${estado.pois.length})</option>` +
+    Object.entries(resumen.conteo_por_categoria).sort((a, b) => b[1] - a[1])
+      .map(([cat, n]) => `<option value="${esc(cat)}">${esc(NOMBRES[cat] || cat)} (${n})</option>`).join("");
+  function pintarLista() {
+    const cat = selCat.value;
+    const lugares = estado.pois.filter(({ p }) => !cat || p.categoria === cat)
+      .sort((a, b) => distanciaM(estado.ubicacion, a.latlng) - distanciaM(estado.ubicacion, b.latlng));
+    $("lista-intro").textContent = `Ordenados del más cercano al más lejano, desde ${estado.origenUbicacion === "gps" ? "donde estás" : "la Biblioteca El Tintal (punto de referencia)"}.`;
+    olLista.innerHTML = "";
+    lugares.slice(0, mostrados).forEach(({ p }) => {
+      const d = estado.porId[p.id], f = faltan(p), li = document.createElement("li");
+      li.innerHTML = `<h3><span class="marca-categoria" style="background:${COLORES[p.categoria] || COLORES.otros}" aria-hidden="true"></span>${esc(nombreDe(p))}</h3>
+        <p class="donde">${esc(p.nombre ? p.tipo + " · " : "")}${esc(dondeQueda(d))}</p>
+        ${f.length ? `<p class="ficha-falta">Al mapa le falta: ${esc(f.join(", "))}.</p>` : ""}
+        <div class="acciones-lugar">
+          <button type="button" class="pill" data-accion="oir">🔊 Escuchar</button>
+          <button type="button" class="pill" data-accion="ver">📍 Ver en el mapa</button>
+          ${f.length ? '<button type="button" class="pill" data-accion="completar">✏️ Completar</button>' : ""}
+        </div>`;
+      const decir = `${nombreDe(p)}. ${p.nombre ? p.tipo + ". " : ""}Queda ${dondeQueda(d)}.` + (f.length ? ` Al mapa le falta: ${f.join(", ")}.` : "");
+      li.querySelector("[data-accion=oir]").addEventListener("click", () => leer(decir));
+      li.querySelector("[data-accion=ver]").addEventListener("click", () => {
+        dlgLista.close();
+        if (document.body.classList.contains("sin-mapa")) { poner("sinmapa", false); refrescarInicio(); }
+        irA(p.id);
+      });
+      const c = li.querySelector("[data-accion=completar]");
+      if (c) c.addEventListener("click", () => { dlgLista.close(); abrirCompletar(p.id); });
+      olLista.appendChild(li);
+    });
+    $("btn-lista-mas").hidden = lugares.length <= mostrados;
+    return lugares.length;
+  }
+  function abrirLista() {
+    mostrados = PASO_LISTA; pintarLista(); dlgLista.showModal();
+    if (estado.leerVoz) leer(`Lista de lugares. ${$("lista-intro").textContent} El más cercano: ${olLista.querySelector("h3").textContent}.`);
+  }
+  $("btn-lista").addEventListener("click", abrirLista);
+  $("btn-lista-barra").addEventListener("click", abrirLista);
+  $("btn-cerrar-lista").addEventListener("click", () => dlgLista.close());
+  dlgLista.addEventListener("click", ev => { if (ev.target === dlgLista) dlgLista.close(); });
+  selCat.addEventListener("change", () => { mostrados = PASO_LISTA; const n = pintarLista(); anunciar(`${n} lugares.`); });
+  $("btn-lista-mas").addEventListener("click", () => {
+    const antes = mostrados; mostrados += PASO_LISTA; pintarLista();
+    const nuevo = olLista.children[antes]; if (nuevo) nuevo.querySelector("button").focus();
+  });
 
   const ulCapas = $("capas");
   Object.entries(resumen.conteo_por_categoria).sort((a, b) => b[1] - a[1]).forEach(([cat, num]) => {
