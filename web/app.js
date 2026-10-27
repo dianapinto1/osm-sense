@@ -429,7 +429,7 @@
     ev.preventDefault();
     const texto = entrada.value.trim();
     if (!texto || estado.ocupado) return;
-    entrada.value = ""; entrada.placeholder = "Pregúntale al mapa…"; autoAlto();
+    entrada.value = ""; entrada.placeholder = document.body.classList.contains("letra-grande") ? "Escribe aquí…" : "Pregúntale al mapa…"; autoAlto();
     // En el celular se cierra el teclado para ver la respuesta; en computador se sigue escribiendo.
     if (esTactil()) entrada.blur(); else entrada.focus();
     cajaIdeasLista.querySelectorAll(".elegida").forEach(x => x.classList.remove("elegida"));
@@ -686,6 +686,8 @@
     voz: { boton: "btn-voz", aplicar: on => { estado.leerVoz = on; if (!on) detenerVoz(); } },
     letra: { boton: "btn-letra", aplicar: on => {
       document.body.classList.toggle("letra-grande", on);
+      // Texto de ayuda corto con letra grande: el largo no cabe y se corta.
+      if (entrada.placeholder.startsWith("Pregúnta") || entrada.placeholder.startsWith("Escribe")) entrada.placeholder = on ? "Escribe aquí…" : "Pregúntale al mapa…";
       // Con letra grande, también los puntos del mapa son más grandes y fáciles de tocar.
       estado.pois.forEach(({ p }) => estado.porId[p.id].marcador.setStyle({ radius: on ? 11 : 7, weight: on ? 3 : 2 }));
       setTimeout(() => mapa.invalidateSize(), 50);
