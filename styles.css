@@ -576,3 +576,59 @@ body.contraste .leaflet-control-attribution a, body.contraste .leaflet-popup-con
   #btn-expandir { display: none; }
   .hoja { max-width: 480px; margin: auto; border-radius: 16px; }
 }
+
+/* =====================================================================================
+   Armonía: una sola columna central, un solo sistema de espacios y botones parejos.
+   Va al final para ordenar todo lo anterior. Los párrafos largos quedan alineados a la
+   izquierda (se leen mejor, sobre todo con baja visión); se centran títulos, cifras,
+   avisos y grupos de botones.
+   ===================================================================================== */
+:root { --esp: 16px; --columna: 640px; }
+
+/* Misma columna y mismo margen lateral para mensajes, ideas y caja de texto. */
+.mensajes { max-width: var(--columna); padding: var(--esp); gap: var(--esp); }
+.entrada { padding-left: var(--esp); padding-right: var(--esp); }
+.ideas, .form-chat { max-width: calc(var(--columna) - 2 * var(--esp)); }
+.contador { max-width: none; }
+
+/* Las respuestas ocupan todo el ancho de la columna: bordes parejos a ambos lados. */
+.msg.osm, .msg.borrador { width: 100%; max-width: 100%; }
+.msg.persona { max-width: 85%; }
+.msg { padding: var(--esp) calc(var(--esp) + 2px); }
+.msg-seccion { margin-top: var(--esp); }
+.remitente { margin-bottom: 8px !important; }
+
+/* Botones de cada mensaje: del mismo ancho, en filas parejas y centrados. */
+.msg-acciones, .borrador-acciones, .lista-lugares .acciones-lugar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: var(--esp);
+}
+.msg-acciones .pill, .borrador-acciones .pill, .borrador-acciones .boton-principal,
+.lista-lugares .acciones-lugar .pill { width: 100%; justify-content: center; text-align: center; padding: 0 12px; }
+.pregunta-vuelta .pill { width: 100%; }
+
+/* Cifra destacada centrada: número arriba, explicación debajo. */
+.destacado { flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: var(--esp); }
+
+/* Avisos del sistema y "Ver lo más nuevo", centrados en la columna. */
+.msg.sistema { max-width: 90%; line-height: 1.45; }
+
+/* Herramientas del mapa centradas arriba; ampliar (izquierda) y zoom (derecha) quedan simétricos abajo. */
+.mapa-controles { justify-content: center; }
+
+/* Encabezado con letra grande en el celular: título centrado y botones parejos debajo. */
+@media (max-width: 520px) {
+  body.letra-grande .barra { justify-content: center; text-align: center; }
+  body.letra-grande .marca { justify-content: center; flex: 1 1 100%; }
+}
+
+/* Hojas (inicio, lo que falta, lista, completar): títulos y textos de ayuda centrados, contenido en columna. */
+.hoja > *, .hoja form > * { max-width: 560px; margin-left: auto; margin-right: auto; }
+.inicio h2, .inicio .inicio-intro { text-align: center; }
+#btn-leer-inicio { display: flex; margin: 0 auto; }
+.hoja-cabeza { gap: 12px; }
+.hoja-pie { max-width: none; }
+
+/* Interruptores del ajuste fino: misma altura en las dos columnas. */
+.interruptores { align-items: stretch; }
+.interruptor { min-height: 56px; }
+.hoja > .hoja-pie, .hoja form > .hoja-pie { max-width: none; margin-left: -16px; margin-right: -16px; }
