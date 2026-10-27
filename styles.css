@@ -495,8 +495,16 @@ body.letra-grande .leaflet-popup-content .ficha-completar { font-size: 17px; }
 /* ---------- Lugares en lista (sin mapa) ---------- */
 .barra-acciones { display: flex; gap: 8px; flex: none; }
 body.sin-mapa .franja-mapa { display: none !important; }
-body.sin-mapa { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: auto minmax(0, 1fr) auto !important; }
-body.sin-mapa .barra { grid-column: 1 !important; }
+.aviso-sinmapa {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px;
+  padding: 10px 16px; background: var(--resalte-fondo); color: var(--titulo); font-size: .85em; font-weight: 600;
+  box-shadow: inset 0 -1px 0 var(--linea);
+}
+body.contraste .aviso-sinmapa { border-bottom: 2px solid #000; }
+.aviso-sinmapa .pill { background: var(--principal); color: var(--principal-texto); }
+body.sin-mapa { grid-template-rows: auto auto minmax(0, 1fr) auto !important; }
+body.sin-mapa { grid-template-columns: minmax(0, 1fr) !important; }
+body.sin-mapa .barra, body.sin-mapa .aviso-sinmapa { grid-column: 1 !important; }
 body.sin-mapa .chat, body.sin-mapa .entrada { grid-column: 1 !important; grid-row: auto !important; }
 body.sin-mapa .mensajes, body.sin-mapa .form-chat, body.sin-mapa .ideas { max-width: 900px; }
 
